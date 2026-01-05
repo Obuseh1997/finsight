@@ -1,0 +1,8 @@
+# Ignore Python files and other root-level files
+*.py
+parsers/
+scrubbers/
+utils/
+output/
+*.json
+!pdf-insights-app/**
