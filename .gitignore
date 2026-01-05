@@ -1,0 +1,35 @@
+# Output files
+output/
+temp/
+*.pyc
+__pycache__/
+
+# Merchant dictionary (contains user data)
+merchant_dictionary.json
+merchant_dictionary.backup.json
+
+# Node modules
+pdf-insights-app/node_modules/
+pdf-insights-app/.next/
+pdf-insights-app/.turbo/
+pdf-insights-app/out/
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Test files
+test-*.json
+*-test.json
+example_*.json
+
+# Logs
+*.log
+npm-debug.log*

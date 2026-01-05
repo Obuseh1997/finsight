@@ -1,0 +1,534 @@
+{
+  "statement_period": {
+    "start_date": "2025-11-01",
+    "end_date": "2025-11-30"
+  },
+  "summary": {
+    "opening_balance": 1139.23,
+    "total_withdrawals": 3593.46,
+    "total_deposits": 5860.96,
+    "closing_balance": 3406.73
+  },
+  "transactions": [
+    {
+      "date": "2025-11-03",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "Nov 3VISA DEBIT RETAIL  PURCHASE",
+      "amount": 6.9500000000000455,
+      "balance": 1132.28
+    },
+    {
+      "date": "2025-11-03",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 17.87999999999988,
+      "balance": 1114.4
+    },
+    {
+      "date": "2025-11-03",
+      "type": "credit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT PURCHASE REVERSAL",
+      "amount": -17.87999999999988,
+      "balance": 1132.28
+    },
+    {
+      "date": "2025-11-03",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 17.569999999999936,
+      "balance": 1114.71
+    },
+    {
+      "date": "2025-11-03",
+      "type": "debit",
+      "merchant": "Unknown",
+      "description": "E-TRANSFER        [REF]",
+      "amount": 100,
+      "balance": 1014.71
+    },
+    {
+      "date": "2025-11-03",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 14.660000000000082,
+      "balance": 1000.05
+    },
+    {
+      "date": "2025-11-03",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 15.019999999999982,
+      "balance": 985.03
+    },
+    {
+      "date": "2025-11-04",
+      "type": "credit",
+      "merchant": "Unknown",
+      "description": "Nov 4E-TRANSFER        [REF]",
+      "amount": -26.660000000000082,
+      "balance": 1011.69
+    },
+    {
+      "date": "2025-11-05",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 35.930000000000064,
+      "balance": 975.76
+    },
+    {
+      "date": "2025-11-05",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 18.66999999999996,
+      "balance": 957.09
+    },
+    {
+      "date": "2025-11-05",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 20.730000000000018,
+      "balance": 936.36
+    },
+    {
+      "date": "2025-11-06",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "Nov 6VISA DEBIT RETAIL  PURCHASE",
+      "amount": 7.990000000000009,
+      "balance": 928.37
+    },
+    {
+      "date": "2025-11-07",
+      "type": "debit",
+      "merchant": "Unknown",
+      "description": "Nov 7E-TRANSFER        [REF]",
+      "amount": 50,
+      "balance": 878.37
+    },
+    {
+      "date": "2025-11-07",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 20.66999999999996,
+      "balance": 857.7
+    },
+    {
+      "date": "2025-11-10",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "Nov 10VISA DEBIT RETAIL  PURCHASE",
+      "amount": 259.37,
+      "balance": 598.33
+    },
+    {
+      "date": "2025-11-10",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 16.680000000000064,
+      "balance": 581.65
+    },
+    {
+      "date": "2025-11-10",
+      "type": "debit",
+      "merchant": "Unknown",
+      "description": "E-TRANSFER        [REF]",
+      "amount": 200,
+      "balance": 381.65
+    },
+    {
+      "date": "2025-11-10",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 32.85999999999996,
+      "balance": 348.79
+    },
+    {
+      "date": "2025-11-10",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 16.83000000000004,
+      "balance": 331.96
+    },
+    {
+      "date": "2025-11-10",
+      "type": "credit",
+      "merchant": "INTERNET TRANSFER",
+      "description": "INTERNET TRANSFER 000000212946800.001,131.96",
+      "amount": -800,
+      "balance": 1131.96
+    },
+    {
+      "date": "2025-11-10",
+      "type": "credit",
+      "merchant": "VISA DEBIT RETAIL PURCHASE",
+      "description": "INTERNET TRANSFER 000000213165792.42339.54",
+      "amount": -213164660.45999998,
+      "balance": 213165792.42
+    },
+    {
+      "date": "2025-11-10",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 213165458.54,
+      "balance": 333.88
+    },
+    {
+      "date": "2025-11-10",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 16.80000000000001,
+      "balance": 317.08
+    },
+    {
+      "date": "2025-11-01",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 7.539999999999964,
+      "balance": 309.54
+    },
+    {
+      "date": "2025-11-01",
+      "type": "credit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": -0.2899999999999636,
+      "balance": 309.83
+    },
+    {
+      "date": "2025-11-01",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 15.45999999999998,
+      "balance": 294.37
+    },
+    {
+      "date": "2025-11-01",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 2.259999999999991,
+      "balance": 292.11
+    },
+    {
+      "date": "2025-11-01",
+      "type": "credit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": -11.509999999999991,
+      "balance": 303.62
+    },
+    {
+      "date": "2025-11-12",
+      "type": "debit",
+      "merchant": "Unknown",
+      "description": "Nov 12PREAUTHORIZED DEBIT",
+      "amount": 112.47,
+      "balance": 191.15
+    },
+    {
+      "date": "2025-11-14",
+      "type": "credit",
+      "merchant": "AE/EI",
+      "description": "Nov 14DEPOSIT",
+      "amount": -1232,
+      "balance": 1423.15
+    },
+    {
+      "date": "2025-11-14",
+      "type": "debit",
+      "merchant": "Uber Holdings C",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 41.98000000000002,
+      "balance": 1381.17
+    },
+    {
+      "date": "2025-11-17",
+      "type": "credit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": -4.339999999999918,
+      "balance": 1385.51
+    },
+    {
+      "date": "2025-11-17",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 12.980000000000018,
+      "balance": 1372.53
+    },
+    {
+      "date": "2025-11-17",
+      "type": "credit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": -7.039999999999964,
+      "balance": 1379.57
+    },
+    {
+      "date": "2025-11-17",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 12.519999999999982,
+      "balance": 1367.05
+    },
+    {
+      "date": "2025-11-17",
+      "type": "debit",
+      "merchant": "Unknown",
+      "description": "E-TRANSFER        [REF]",
+      "amount": 140,
+      "balance": 1227.05
+    },
+    {
+      "date": "2025-11-17",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 5.369999999999891,
+      "balance": 1221.68
+    },
+    {
+      "date": "2025-11-01",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 7.519999999999982,
+      "balance": 1214.16
+    },
+    {
+      "date": "2025-11-01",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 11.420000000000073,
+      "balance": 1202.74
+    },
+    {
+      "date": "2025-11-01",
+      "type": "debit",
+      "merchant": "Unknown",
+      "description": "E-TRANSFER        [REF]",
+      "amount": 70,
+      "balance": 1132.74
+    },
+    {
+      "date": "2025-11-18",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "Nov 18VISA DEBIT RETAIL  PURCHASE",
+      "amount": 69.43000000000006,
+      "balance": 1063.31
+    },
+    {
+      "date": "2025-11-18",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 22.230000000000018,
+      "balance": 1041.08
+    },
+    {
+      "date": "2025-11-19",
+      "type": "debit",
+      "merchant": "SportChek",
+      "description": "Nov 19VISA DEBIT RETAIL  PURCHASE",
+      "amount": 180.77999999999997,
+      "balance": 860.3
+    },
+    {
+      "date": "2025-11-20",
+      "type": "debit",
+      "merchant": "Unknown",
+      "description": "Nov 20E-TRANSFER        [REF]",
+      "amount": 35,
+      "balance": 825.3
+    },
+    {
+      "date": "2025-11-21",
+      "type": "debit",
+      "merchant": "SportChek",
+      "description": "Nov 21VISA DEBIT RETAIL  PURCHASE",
+      "amount": 271.19999999999993,
+      "balance": 554.1
+    },
+    {
+      "date": "2025-11-21",
+      "type": "debit",
+      "merchant": "Marks",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 203.39000000000004,
+      "balance": 350.71
+    },
+    {
+      "date": "2025-11-21",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 6.829999999999984,
+      "balance": 343.88
+    },
+    {
+      "date": "2025-11-24",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "Nov 24VISA DEBIT RETAIL  PURCHASE",
+      "amount": 248.74,
+      "balance": 95.14
+    },
+    {
+      "date": "2025-11-24",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 19.78,
+      "balance": 75.36
+    },
+    {
+      "date": "2025-11-24",
+      "type": "credit",
+      "merchant": "AE/EI",
+      "description": "DEPOSIT",
+      "amount": -2464,
+      "balance": 2539.36
+    },
+    {
+      "date": "2025-11-24",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 15.210000000000036,
+      "balance": 2524.15
+    },
+    {
+      "date": "2025-11-24",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 18.389999999999873,
+      "balance": 2505.76
+    },
+    {
+      "date": "2025-11-01",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 19.850000000000364,
+      "balance": 2485.91
+    },
+    {
+      "date": "2025-11-01",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 1.2199999999998,
+      "balance": 2484.69
+    },
+    {
+      "date": "2025-11-01",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 15.670000000000073,
+      "balance": 2469.02
+    },
+    {
+      "date": "2025-11-01",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 6.5900000000001455,
+      "balance": 2462.43
+    },
+    {
+      "date": "2025-11-25",
+      "type": "credit",
+      "merchant": "Unknown",
+      "description": "Nov 25E-TRANSFER        [REF]",
+      "amount": -754.6100000000001,
+      "balance": 3217.04
+    },
+    {
+      "date": "2025-11-25",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 26.029999999999745,
+      "balance": 3191.01
+    },
+    {
+      "date": "2025-11-25",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "amount": 29.800000000000182,
+      "balance": 3161.21
+    },
+    {
+      "date": "2025-11-25",
+      "type": "credit",
+      "merchant": "Unknown",
+      "description": "E-TRANSFER        [REF]",
+      "amount": -45,
+      "balance": 3206.21
+    },
+    {
+      "date": "2025-11-26",
+      "type": "debit",
+      "merchant": "Uber",
+      "description": "Nov 26VISA DEBIT RETAIL  PURCHASE",
+      "amount": 99.48000000000002,
+      "balance": 3106.73
+    },
+    {
+      "date": "2025-11-28",
+      "type": "credit",
+      "merchant": "Unknown",
+      "description": "Nov 28E-TRANSFER        [REF]",
+      "amount": -300,
+      "balance": 3406.73
+    },
+    {
+      "date": "2025-11-28",
+      "type": "debit",
+      "merchant": "CAPPED MONTHLY FEE$16.95",
+      "description": "SERVICE CHARGE",
+      "amount": 3389.78,
+      "balance": 16.95
+    },
+    {
+      "date": "2025-11-28",
+      "type": "credit",
+      "merchant": "RECORD-KEEPING N/A",
+      "description": "CAPPED MONTHLY FEE$16.95",
+      "amount": -3372.8300000000004,
+      "balance": 3389.78
+    },
+    {
+      "date": "2025-11-28",
+      "type": "credit",
+      "merchant": "Closing balance$3,406.73",
+      "description": "SERVICE CHARGE DISCOUNT16.953,406.73",
+      "amount": -16.949999999999818,
+      "balance": 3406.73
+    }
+  ]
+}

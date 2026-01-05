@@ -1,0 +1,203 @@
+{
+  "statement_period": {
+    "start_date": "2025-10-24",
+    "end_date": "2025-11-24"
+  },
+  "summary": {
+    "opening_balance": 6261.27,
+    "total_withdrawals": 3000.05,
+    "total_deposits": 7.5,
+    "closing_balance": 3268.72
+  },
+  "transactions": [
+    {
+      "date": "2025-10-27",
+      "type": "debit",
+      "merchant": "Contactless Purchase",
+      "description": "Interac Purchase",
+      "amount": -2.26
+    },
+    {
+      "date": "2025-10-27",
+      "type": "debit",
+      "merchant": "Food Basics",
+      "description": "Interac Purchase",
+      "amount": -873.98
+    },
+    {
+      "date": "2025-10-27",
+      "type": "debit",
+      "merchant": "STATE MAIN GL36",
+      "description": "Interac Purchase",
+      "amount": -36.68
+    },
+    {
+      "date": "2025-10-27",
+      "type": "debit",
+      "merchant": "GEELAND INTERNA45",
+      "description": "Interac Purchase",
+      "amount": -45.91
+    },
+    {
+      "date": "2025-10-27",
+      "type": "debit",
+      "merchant": "Starbucks",
+      "description": "Interac Purchase",
+      "amount": -58.35
+    },
+    {
+      "date": "2025-10-27",
+      "type": "debit",
+      "merchant": "Food Basics",
+      "description": "Interac Purchase",
+      "amount": -87110.71
+    },
+    {
+      "date": "2025-10-28",
+      "type": "debit",
+      "merchant": "HAZIELVIEW PROP",
+      "description": "Online Banking Payment",
+      "amount": -1350
+    },
+    {
+      "date": "2025-10-31",
+      "type": "debit",
+      "merchant": "Rexall Pharmacy",
+      "description": "Interac Purchase",
+      "amount": -18.23
+    },
+    {
+      "date": "2025-10-31",
+      "type": "debit",
+      "merchant": "Food Basics",
+      "description": "Interac Purchase",
+      "amount": -8735.68
+    },
+    {
+      "date": "2025-11-03",
+      "type": "debit",
+      "merchant": "Food Basics",
+      "description": "Interac Purchase",
+      "amount": -874.05
+    },
+    {
+      "date": "2025-11-03",
+      "type": "debit",
+      "merchant": "Contactless Purchase",
+      "description": "Interac Purchase",
+      "amount": -8.03
+    },
+    {
+      "date": "2025-11-03",
+      "type": "debit",
+      "merchant": "Food Basics",
+      "description": "Interac Purchase",
+      "amount": -741.85
+    },
+    {
+      "date": "2025-11-03",
+      "type": "debit",
+      "merchant": "Green Fresh",
+      "description": "Interac Purchase",
+      "amount": -50.33
+    },
+    {
+      "date": "2025-11-04",
+      "type": "debit",
+      "merchant": "Rexall Pharmacy",
+      "description": "Interac Purchase",
+      "amount": -33.09
+    },
+    {
+      "date": "2025-11-05",
+      "type": "debit",
+      "merchant": "Coca-Cola Vending",
+      "description": "Interac Purchase",
+      "amount": -512823166.75
+    },
+    {
+      "date": "2025-11-07",
+      "type": "debit",
+      "merchant": "Rexall Pharmacy",
+      "description": "Interac Purchase",
+      "amount": -34.12
+    },
+    {
+      "date": "2025-11-10",
+      "type": "debit",
+      "merchant": "Fido Mobile",
+      "description": "Telephone Bill Payment",
+      "amount": -100
+    },
+    {
+      "date": "2025-11-10",
+      "type": "debit",
+      "merchant": "Coca-Cola Vending",
+      "description": "Interac Purchase",
+      "amount": -512823166.75
+    },
+    {
+      "date": "2025-11-10",
+      "type": "debit",
+      "merchant": "Food Basics",
+      "description": "Interac Purchase",
+      "amount": -743.34
+    },
+    {
+      "date": "2025-11-10",
+      "type": "debit",
+      "merchant": "Green Fresh",
+      "description": "Interac Purchase",
+      "amount": -101.57
+    },
+    {
+      "date": "2025-11-10",
+      "type": "debit",
+      "merchant": "Supplement King",
+      "description": "Interac Purchase",
+      "amount": -124.85
+    },
+    {
+      "date": "2025-11-12",
+      "type": "debit",
+      "merchant": "E-Transfer Recipient",
+      "description": "E-Transfer",
+      "amount": -50
+    },
+    {
+      "date": "2025-11-17",
+      "type": "debit",
+      "merchant": "Marshalls",
+      "description": "Interac Purchase",
+      "amount": -613.56
+    },
+    {
+      "date": "2025-11-17",
+      "type": "debit",
+      "merchant": "Food Basics",
+      "description": "Interac Purchase",
+      "amount": -8770.76
+    },
+    {
+      "date": "2025-11-20",
+      "type": "debit",
+      "merchant": "Food Basics",
+      "description": "Interac Purchase",
+      "amount": -8771.08
+    },
+    {
+      "date": "2025-11-24",
+      "type": "debit",
+      "merchant": "Lago Bar & Grill",
+      "description": "Interac Purchase",
+      "amount": -15.59
+    },
+    {
+      "date": "2025-11-24",
+      "type": "debit",
+      "merchant": "RBC Monthly Fee",
+      "description": "Monthly Fee",
+      "amount": -3268.72
+    }
+  ]
+}

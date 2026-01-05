@@ -1,0 +1,517 @@
+{
+  "extracted_at": "2025-12-17T06:05:26.313105",
+  "source_file": "/Users/emekeobuseh/Downloads/CIBC Statement - Nov 25.pdf",
+  "extraction_method": "pdfplumber",
+  "transactions": [
+    {
+      "date": "Nov 24",
+      "description": "CORRECTION VISA DEBIT RETAIL PURCHASE CORRECTION VISA DEBIT RETAIL PURCHASE",
+      "merchant": "CORRECTION CORRECTION",
+      "amount": 5.3,
+      "type": "credit",
+      "withdrawal": 19.85,
+      "deposit": 5.3,
+      "balance": 2485.91
+    },
+    {
+      "date": "Nov 24",
+      "description": "[NAME] statement will be considered correct if you do not report UBER CANADA/UBE [REF] UBER CANADA/UBE [REF] UBER CANADA/UBE [REF] UBER CANADA/UBE [REF] in writing within the period applicable to your regular",
+      "merchant": "Uber",
+      "amount": 30.0,
+      "type": "credit",
+      "withdrawal": null,
+      "deposit": 30.0,
+      "balance": null
+    },
+    {
+      "date": "Nov 24",
+      "description": "PREAUTHORIZED DEBIT CORRECTION VISA DEBIT RETAIL PURCHASE CORRECTION Wealthsimple Investments Inc. UBER CANADA/UBE [REF] UBER CANADA/UBE [REF] UBER CANADA/UBE [REF] or 60 days from the date the entry was,",
+      "merchant": "Uber",
+      "amount": 18.39,
+      "type": "credit",
+      "withdrawal": 12.82,
+      "deposit": 18.39,
+      "balance": 2504.3
+    },
+    {
+      "date": "Nov 24",
+      "description": "PREAUTHORIZED DEBIT VISA DEBIT RETAIL PURCHASE CORRECTION VISA DEBIT RETAIL PURCHASE",
+      "merchant": "CORRECTION",
+      "amount": 12.52,
+      "type": "credit",
+      "withdrawal": 19.61,
+      "deposit": 12.52,
+      "balance": 2484.69
+    },
+    {
+      "date": "Nov 24",
+      "description": "are based on our current records, as of December 30 days from last date of the statement period covered Wealthsimple Investments Inc. UBER CANADA/UBE [REF] UBER CANADA/UBE [REF] UBER CANADA/UBE [REF] does not reflect any changes in account period included the date the entry was, or should have names that may have occurred prior to this date.",
+      "merchant": "Uber",
+      "amount": -16.0,
+      "type": "debit",
+      "withdrawal": 16.0,
+      "deposit": null,
+      "balance": null
+    },
+    {
+      "date": "Nov 4",
+      "description": "[NAME] [REF] VISA DEBIT RETAIL PURCHASE VISA DEBIT RETAIL PURCHASE VISA DEBIT RETAIL PURCHASE not apply to improper credits to your account. Your rights Uche Chukwujekwu UBER CANADA/UBE [REF] UBER CANADA/UBE [REF] UBER CANADA/UBE [REF] account errors, or do not apply",
+      "merchant": "Uber",
+      "amount": 42.0,
+      "type": "credit",
+      "withdrawal": 15.67,
+      "deposit": 42.0,
+      "balance": 2469.02
+    },
+    {
+      "date": "Nov 5",
+      "description": "INTL VISA DEB RETAIL PURCHASE CORRECTION [NAME] [REF] CORRECTION Spotify P3C1FAC [REF] UBER CANADA/UBE [REF] Ria UBER CANADA/UBE [REF] [CONVERSION]",
+      "merchant": "Uber",
+      "amount": 15.21,
+      "type": "credit",
+      "withdrawal": 70.0,
+      "deposit": 15.21,
+      "balance": 2484.23
+    },
+    {
+      "date": "Nov 5",
+      "description": "VISA DEBIT RETAIL PURCHASE PREAUTHORIZED DEBIT VISA DEBIT RETAIL PURCHASE Conversion Fee: summary",
+      "merchant": "Conversion Fee: summary",
+      "amount": -21.8,
+      "type": "debit",
+      "withdrawal": 21.8,
+      "deposit": null,
+      "balance": 2462.43
+    },
+    {
+      "date": "Nov 5",
+      "description": "VISA DEBIT RETAIL PURCHASE UBER CANADA/UBE [REF] Wealthsimple Investments Inc. UBER CANADA/UBE [REF] foreign currency from a bank machine located outside to pay plus an administration fee, which is UBER CANADA/UBE [REF]",
+      "merchant": "Uber",
+      "amount": -21.59,
+      "type": "debit",
+      "withdrawal": 21.59,
+      "deposit": null,
+      "balance": 975.76
+    },
+    {
+      "date": "Nov 5",
+      "description": "CORRECTION PREAUTHORIZED DEBIT CORRECTION",
+      "merchant": "CORRECTION CORRECTION",
+      "amount": 19.61,
+      "type": "credit",
+      "withdrawal": 10.0,
+      "deposit": 19.61,
+      "balance": 2482.04
+    },
+    {
+      "date": "Nov 5",
+      "description": "on Nov 1, 2025",
+      "merchant": "on Nov 1, 2025",
+      "amount": -1139.23,
+      "type": "debit",
+      "withdrawal": 1139.23,
+      "deposit": null,
+      "balance": null
+    },
+    {
+      "date": "Nov 5",
+      "description": "is available at any CIBC branch in Canada (this is in",
+      "merchant": "is available at any CIBC branch in Canada (this is in",
+      "amount": 465.0,
+      "type": "credit",
+      "withdrawal": null,
+      "deposit": 465.0,
+      "balance": null
+    },
+    {
+      "date": "Nov 5",
+      "description": "VISA DEBIT RETAIL PURCHASE UBER CANADA/UBE [REF] Wealthsimple Investments Inc. UBER CANADA/UBE [REF] fee).",
+      "merchant": "Uber",
+      "amount": -18.67,
+      "type": "debit",
+      "withdrawal": 18.67,
+      "deposit": null,
+      "balance": 957.09
+    },
+    {
+      "date": "Nov 5",
+      "description": "- UBER CANADA/UBE [REF]",
+      "merchant": "Uber",
+      "amount": -3593.46,
+      "type": "debit",
+      "withdrawal": 3593.46,
+      "deposit": null,
+      "balance": null
+    },
+    {
+      "date": "Nov 18",
+      "description": "VISA DEBIT RETAIL PURCHASE VISA DEBIT RETAIL PURCHASE PREAUTHORIZED DEBIT",
+      "merchant": "Unknown",
+      "amount": -10.0,
+      "type": "debit",
+      "withdrawal": 10.0,
+      "deposit": null,
+      "balance": 2472.04
+    },
+    {
+      "date": "Nov 18",
+      "description": "+",
+      "merchant": "+",
+      "amount": -5860.96,
+      "type": "debit",
+      "withdrawal": 5860.96,
+      "deposit": null,
+      "balance": null
+    },
+    {
+      "date": "Nov 18",
+      "description": "VISA DEBIT RETAIL PURCHASE UBER CANADA/UBE [REF] UBER CANADA/UBE [REF] Wealthsimple Investments Inc. of CIBC trademark of CIBC UBER CANADA/UBE [REF]",
+      "merchant": "Uber",
+      "amount": -20.73,
+      "type": "debit",
+      "withdrawal": 20.73,
+      "deposit": null,
+      "balance": 936.36
+    },
+    {
+      "date": "Nov 18",
+      "description": "PREAUTHORIZED DEBIT VISA DEBIT RETAIL PURCHASE PREAUTHORIZED DEBIT",
+      "merchant": "Unknown",
+      "amount": -20.0,
+      "type": "debit",
+      "withdrawal": 20.0,
+      "deposit": null,
+      "balance": 2452.04
+    },
+    {
+      "date": "Nov 18",
+      "description": "= on Nov 30, 2025 registered trademark of Interac Inc./CIBC",
+      "merchant": "= on Nov 30, 2025 registered trademark of Interac Inc./CIBC",
+      "amount": -3406.73,
+      "type": "debit",
+      "withdrawal": 3406.73,
+      "deposit": null,
+      "balance": null
+    },
+    {
+      "date": "Nov 18",
+      "description": "CORRECTION Wealthsimple Investments Inc. UBER CANADA/UBE [REF] Wealthsimple Investments Inc.",
+      "merchant": "Uber",
+      "amount": 18.67,
+      "type": "credit",
+      "withdrawal": null,
+      "deposit": 18.67,
+      "balance": 955.03
+    },
+    {
+      "date": "Nov 18",
+      "description": "UBER CANADA/UBE [REF]",
+      "merchant": "Uber",
+      "amount": 7401.0,
+      "type": "credit",
+      "withdrawal": null,
+      "deposit": 7401.0,
+      "balance": null
+    },
+    {
+      "date": "Nov 25",
+      "description": "PREAUTHORIZED DEBIT VISA DEBIT RETAIL PURCHASE [NAME] [REF]",
+      "merchant": "Unknown",
+      "amount": 765.0,
+      "type": "credit",
+      "withdrawal": 180.78,
+      "deposit": 765.0,
+      "balance": 3217.04
+    },
+    {
+      "date": "Nov 6",
+      "description": "VISA DEBIT RETAIL PURCHASE Wealthsimple Investments Inc. WWW.SPORTCHEK.C [REF] Oshioriahme Momoh",
+      "merchant": "Wealthsimple",
+      "amount": -26.66,
+      "type": "debit",
+      "withdrawal": 26.66,
+      "deposit": null,
+      "balance": 928.37
+    },
+    {
+      "date": "Nov 6",
+      "description": "UBER CANADA/UBE [REF]",
+      "merchant": "Uber",
+      "amount": 420.0,
+      "type": "credit",
+      "withdrawal": null,
+      "deposit": 420.0,
+      "balance": null
+    },
+    {
+      "date": "Nov 20",
+      "description": "PREAUTHORIZED DEBIT [NAME] [REF] VISA DEBIT RETAIL PURCHASE",
+      "merchant": "Unknown",
+      "amount": -26.03,
+      "type": "debit",
+      "withdrawal": 26.03,
+      "deposit": null,
+      "balance": 3191.01
+    },
+    {
+      "date": "Nov 7",
+      "description": "[NAME] [REF] GOODLIFE FITNESS CENTRES INC barber UBER CANADA/UBE [REF] One-time contact",
+      "merchant": "Uber",
+      "amount": -50.0,
+      "type": "debit",
+      "withdrawal": 50.0,
+      "deposit": null,
+      "balance": 878.37
+    },
+    {
+      "date": "Nov 21",
+      "description": "DEPOSIT VISA DEBIT RETAIL PURCHASE VISA DEBIT RETAIL PURCHASE",
+      "merchant": "Unknown",
+      "amount": -29.8,
+      "type": "debit",
+      "withdrawal": 29.8,
+      "deposit": null,
+      "balance": 3161.21
+    },
+    {
+      "date": "Nov 21",
+      "description": "VISA DEBIT RETAIL PURCHASE AE/EI WWW.SPORTCHEK.C [REF] UBER CANADA/UBE [REF] UBER CANADA/UBE [REF]",
+      "merchant": "Uber",
+      "amount": -20.67,
+      "type": "debit",
+      "withdrawal": 20.67,
+      "deposit": null,
+      "balance": 857.7
+    },
+    {
+      "date": "Nov 21",
+      "description": "VISA DEBIT RETAIL PURCHASE VISA DEBIT RETAIL PURCHASE [NAME] [REF]",
+      "merchant": "Unknown",
+      "amount": 45.0,
+      "type": "credit",
+      "withdrawal": 203.39,
+      "deposit": 45.0,
+      "balance": 3206.21
+    },
+    {
+      "date": "Nov 21",
+      "description": "PREAUTHORIZED DEBIT Uber Holdings C [REF] WWW.MARKS.COM [REF] [NAME] [NAME] [REF]",
+      "merchant": "Uber",
+      "amount": -250.0,
+      "type": "debit",
+      "withdrawal": 250.0,
+      "deposit": null,
+      "balance": 607.7
+    },
+    {
+      "date": "Nov 17",
+      "description": "INT VISA DEB PURCHASE REVERSAL VISA DEBIT RETAIL PURCHASE PREAUTHORIZED DEBIT balance CIBC Securities Inc. UBER CANADA/UBE T25319279409 UBER CANADA/UBE [REF] GOODLIFE FITNESS CENTRES INC",
+      "merchant": "Uber",
+      "amount": 16.68,
+      "type": "credit",
+      "withdrawal": 82.47,
+      "deposit": 16.68,
+      "balance": 3123.74
+    },
+    {
+      "date": "Nov 3",
+      "description": "VISA DEBIT RETAIL PURCHASE",
+      "merchant": "Unknown",
+      "amount": -6.95,
+      "type": "debit",
+      "withdrawal": 6.95,
+      "deposit": null,
+      "balance": 1132.28
+    },
+    {
+      "date": "Nov 10",
+      "description": "VISA DEBIT RETAIL PURCHASE [CONVERSION]",
+      "merchant": "16.68 CAD @ 1.000000",
+      "amount": -9.37,
+      "type": "debit",
+      "withdrawal": 9.37,
+      "deposit": null,
+      "balance": 598.33
+    },
+    {
+      "date": "Nov 26",
+      "description": "CORRECTION VISA DEBIT RETAIL PURCHASE UBER *TRIP [NAME] [REF] UBER CANADA/UBE [REF]",
+      "merchant": "Uber",
+      "amount": 6.83,
+      "type": "credit",
+      "withdrawal": 17.01,
+      "deposit": 6.83,
+      "balance": 3106.73
+    },
+    {
+      "date": "Nov 26",
+      "description": "VISA DEBIT RETAIL PURCHASE UBER CANADA/UBE [REF] UBER CANADA/UBE [REF]",
+      "merchant": "Uber",
+      "amount": -12.34,
+      "type": "debit",
+      "withdrawal": 12.34,
+      "deposit": null,
+      "balance": 1385.51
+    },
+    {
+      "date": "Nov 26",
+      "description": "VISA DEBIT RETAIL PURCHASE",
+      "merchant": "Unknown",
+      "amount": -17.88,
+      "type": "debit",
+      "withdrawal": 17.88,
+      "deposit": null,
+      "balance": 1114.4
+    },
+    {
+      "date": "Nov 26",
+      "description": "VISA DEBIT RETAIL PURCHASE UBER CANADA/UBE [REF]",
+      "merchant": "Uber",
+      "amount": -16.68,
+      "type": "debit",
+      "withdrawal": 16.68,
+      "deposit": null,
+      "balance": 581.65
+    },
+    {
+      "date": "Nov 28",
+      "description": "PREAUTHORIZED DEBIT [NAME] [REF] UBER CANADA/UBE [REF] UBER CANADA/UBE [REF]",
+      "merchant": "Uber",
+      "amount": 300.0,
+      "type": "credit",
+      "withdrawal": 250.0,
+      "deposit": 300.0,
+      "balance": 3406.73
+    },
+    {
+      "date": "Nov 28",
+      "description": "VISA DEBIT RETAIL PURCHASE [REF] Raynard Omongbale",
+      "merchant": "Raynard Omongbale",
+      "amount": -12.98,
+      "type": "debit",
+      "withdrawal": 12.98,
+      "deposit": null,
+      "balance": 1372.53
+    },
+    {
+      "date": "Nov 28",
+      "description": "VISA DEBIT PURCHASE REVERSAL",
+      "merchant": "REVERSAL",
+      "amount": 17.88,
+      "type": "credit",
+      "withdrawal": null,
+      "deposit": 17.88,
+      "balance": 1132.28
+    },
+    {
+      "date": "Nov 28",
+      "description": "[NAME] [REF] UBER CANADA/UBE [REF] CIBC Securities Inc.",
+      "merchant": "Uber",
+      "amount": -200.0,
+      "type": "debit",
+      "withdrawal": 200.0,
+      "deposit": null,
+      "balance": 381.65
+    },
+    {
+      "date": "Nov 28",
+      "description": "SERVICE CHARGE UBER CANADA/UBE [REF] lemonade",
+      "merchant": "Uber",
+      "amount": -16.95,
+      "type": "debit",
+      "withdrawal": 16.95,
+      "deposit": null,
+      "balance": 3389.78
+    },
+    {
+      "date": "Nov 24",
+      "description": "CORRECTION VISA DEBIT RETAIL PURCHASE [NAME] [NAME] FEE$16.95",
+      "merchant": "CORRECTION CAPPED MONTHLY FEE$16.95",
+      "amount": 12.34,
+      "type": "credit",
+      "withdrawal": 5.57,
+      "deposit": 12.34,
+      "balance": 95.14
+    },
+    {
+      "date": "Nov 24",
+      "description": "VISA DEBIT MERCHANDISE RET REV",
+      "merchant": "VISA DEBIT MERCHANDISE RET REV",
+      "amount": -9.28,
+      "type": "debit",
+      "withdrawal": 9.28,
+      "deposit": null,
+      "balance": 1123.0
+    },
+    {
+      "date": "Nov 24",
+      "description": "VISA DEBIT RETAIL PURCHASE UBER CANADA/UBE [REF] UBER CANADA/UBE [REF] [NAME] N/A UBER CANADA/UBE [REF] UBER CANADA/UBE [REF]",
+      "merchant": "Uber",
+      "amount": -32.86,
+      "type": "debit",
+      "withdrawal": 32.86,
+      "deposit": null,
+      "balance": 348.79
+    },
+    {
+      "date": "Nov 24",
+      "description": "VISA DEBIT RETAIL PURCHASE VISA DEBIT RETAIL PURCHASE SERVICE CHARGE DISCOUNT",
+      "merchant": "SERVICE CHARGE DISCOUNT",
+      "amount": 16.95,
+      "type": "credit",
+      "withdrawal": 19.78,
+      "deposit": 16.95,
+      "balance": 3406.73
+    },
+    {
+      "date": "Nov 24",
+      "description": "VISA DEBIT RETAIL PURCHASE",
+      "merchant": "Unknown",
+      "amount": -8.29,
+      "type": "debit",
+      "withdrawal": 8.29,
+      "deposit": null,
+      "balance": 1114.71
+    },
+    {
+      "date": "Nov 24",
+      "description": "VISA DEBIT RETAIL PURCHASE UBER CANADA/UBE [REF] UBER CANADA/UBE [REF] balance UBER CANADA/UBE [REF] UBER CANADA/UBE [REF]",
+      "merchant": "Uber",
+      "amount": -16.83,
+      "type": "debit",
+      "withdrawal": 16.83,
+      "deposit": null,
+      "balance": 331.96
+    },
+    {
+      "date": "Nov 24",
+      "description": "VISA DEBIT RETAIL PURCHASE DEPOSIT",
+      "merchant": "Unknown",
+      "amount": -12.52,
+      "type": "debit",
+      "withdrawal": 12.52,
+      "deposit": null,
+      "balance": 2539.36
+    },
+    {
+      "date": "Nov 24",
+      "description": "[NAME] [REF]",
+      "merchant": "Unknown",
+      "amount": -100.0,
+      "type": "debit",
+      "withdrawal": 100.0,
+      "deposit": null,
+      "balance": 1014.71
+    },
+    {
+      "date": "Nov 24",
+      "description": "INTERNET TRANSFER [REF] UBER CANADA/UBE [REF] AE/EI",
+      "merchant": "Uber",
+      "amount": 800.0,
+      "type": "credit",
+      "withdrawal": null,
+      "deposit": 800.0,
+      "balance": 1131.96
+    }
+  ]
+}

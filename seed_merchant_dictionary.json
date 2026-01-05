@@ -1,0 +1,422 @@
+{
+  "uber": {
+    "canonical_name": "Uber",
+    "category": "Transportation",
+    "confidence": "high"
+  },
+  "lyft": {
+    "canonical_name": "Lyft",
+    "category": "Transportation",
+    "confidence": "high"
+  },
+  "food_basics": {
+    "canonical_name": "Food Basics",
+    "category": "Groceries",
+    "confidence": "high"
+  },
+  "loblaws": {
+    "canonical_name": "Loblaws",
+    "category": "Groceries",
+    "confidence": "high"
+  },
+  "metro": {
+    "canonical_name": "Metro",
+    "category": "Groceries",
+    "confidence": "high"
+  },
+  "sobeys": {
+    "canonical_name": "Sobeys",
+    "category": "Groceries",
+    "confidence": "high"
+  },
+  "no_frills": {
+    "canonical_name": "No Frills",
+    "category": "Groceries",
+    "confidence": "high"
+  },
+  "freshco": {
+    "canonical_name": "FreshCo",
+    "category": "Groceries",
+    "confidence": "high"
+  },
+  "starbucks": {
+    "canonical_name": "Starbucks",
+    "category": "Dining",
+    "confidence": "high"
+  },
+  "tim_hortons": {
+    "canonical_name": "Tim Hortons",
+    "category": "Dining",
+    "confidence": "high"
+  },
+  "mcdonalds": {
+    "canonical_name": "McDonald's",
+    "category": "Dining",
+    "confidence": "high"
+  },
+  "subway": {
+    "canonical_name": "Subway",
+    "category": "Dining",
+    "confidence": "high"
+  },
+  "pizza_pizza": {
+    "canonical_name": "Pizza Pizza",
+    "category": "Dining",
+    "confidence": "high"
+  },
+  "swiss_chalet": {
+    "canonical_name": "Swiss Chalet",
+    "category": "Dining",
+    "confidence": "high"
+  },
+  "the_keg": {
+    "canonical_name": "The Keg",
+    "category": "Dining",
+    "confidence": "high"
+  },
+  "boston_pizza": {
+    "canonical_name": "Boston Pizza",
+    "category": "Dining",
+    "confidence": "high"
+  },
+  "thai_express": {
+    "canonical_name": "Thai Express",
+    "category": "Dining",
+    "confidence": "high"
+  },
+  "chipotle": {
+    "canonical_name": "Chipotle",
+    "category": "Dining",
+    "confidence": "high"
+  },
+  "wealthsimple": {
+    "canonical_name": "Wealthsimple",
+    "category": "Investments",
+    "confidence": "high"
+  },
+  "questrade": {
+    "canonical_name": "Questrade",
+    "category": "Investments",
+    "confidence": "high"
+  },
+  "td_direct_investing": {
+    "canonical_name": "TD Direct Investing",
+    "category": "Investments",
+    "confidence": "high"
+  },
+  "cibc_securities": {
+    "canonical_name": "CIBC Securities",
+    "category": "Investments",
+    "confidence": "high"
+  },
+  "rbc_direct_investing": {
+    "canonical_name": "RBC Direct Investing",
+    "category": "Investments",
+    "confidence": "high"
+  },
+  "netflix": {
+    "canonical_name": "Netflix",
+    "category": "Subscriptions",
+    "confidence": "high"
+  },
+  "spotify": {
+    "canonical_name": "Spotify",
+    "category": "Subscriptions",
+    "confidence": "high"
+  },
+  "amazon_prime": {
+    "canonical_name": "Amazon Prime",
+    "category": "Subscriptions",
+    "confidence": "high"
+  },
+  "apple_music": {
+    "canonical_name": "Apple Music",
+    "category": "Subscriptions",
+    "confidence": "high"
+  },
+  "apple": {
+    "canonical_name": "Apple",
+    "category": "Digital Services",
+    "confidence": "high"
+  },
+  "adobe": {
+    "canonical_name": "Adobe",
+    "category": "Digital Services",
+    "confidence": "high"
+  },
+  "skipthedishes": {
+    "canonical_name": "SkipTheDishes",
+    "category": "Food Delivery",
+    "confidence": "high"
+  },
+  "skip_the_dishes": {
+    "canonical_name": "SkipTheDishes",
+    "category": "Food Delivery",
+    "confidence": "high"
+  },
+  "doordash": {
+    "canonical_name": "DoorDash",
+    "category": "Food Delivery",
+    "confidence": "high"
+  },
+  "uber_eats": {
+    "canonical_name": "Uber Eats",
+    "category": "Food Delivery",
+    "confidence": "high"
+  },
+  "ubereats": {
+    "canonical_name": "Uber Eats",
+    "category": "Food Delivery",
+    "confidence": "high"
+  },
+  "youtube_premium": {
+    "canonical_name": "YouTube Premium",
+    "category": "Subscriptions",
+    "confidence": "high"
+  },
+  "disney_plus": {
+    "canonical_name": "Disney+",
+    "category": "Subscriptions",
+    "confidence": "high"
+  },
+  "rogers": {
+    "canonical_name": "Rogers",
+    "category": "Utilities",
+    "confidence": "high"
+  },
+  "bell": {
+    "canonical_name": "Bell",
+    "category": "Utilities",
+    "confidence": "high"
+  },
+  "telus": {
+    "canonical_name": "Telus",
+    "category": "Utilities",
+    "confidence": "high"
+  },
+  "fido": {
+    "canonical_name": "Fido",
+    "category": "Utilities",
+    "confidence": "high"
+  },
+  "freedom_mobile": {
+    "canonical_name": "Freedom Mobile",
+    "category": "Utilities",
+    "confidence": "high"
+  },
+  "toronto_hydro": {
+    "canonical_name": "Toronto Hydro",
+    "category": "Utilities",
+    "confidence": "high"
+  },
+  "enbridge": {
+    "canonical_name": "Enbridge",
+    "category": "Utilities",
+    "confidence": "high"
+  },
+  "amazon": {
+    "canonical_name": "Amazon",
+    "category": "Shopping",
+    "confidence": "high"
+  },
+  "walmart": {
+    "canonical_name": "Walmart",
+    "category": "Shopping",
+    "confidence": "high"
+  },
+  "canadian_tire": {
+    "canonical_name": "Canadian Tire",
+    "category": "Shopping",
+    "confidence": "high"
+  },
+  "dollarama": {
+    "canonical_name": "Dollarama",
+    "category": "Shopping",
+    "confidence": "high"
+  },
+  "best_buy": {
+    "canonical_name": "Best Buy",
+    "category": "Shopping",
+    "confidence": "high"
+  },
+  "staples": {
+    "canonical_name": "Staples",
+    "category": "Shopping",
+    "confidence": "high"
+  },
+  "ikea": {
+    "canonical_name": "IKEA",
+    "category": "Shopping",
+    "confidence": "high"
+  },
+  "winners": {
+    "canonical_name": "Winners",
+    "category": "Shopping",
+    "confidence": "high"
+  },
+  "marshalls": {
+    "canonical_name": "Marshalls",
+    "category": "Shopping",
+    "confidence": "high"
+  },
+  "homesense": {
+    "canonical_name": "HomeSense",
+    "category": "Shopping",
+    "confidence": "high"
+  },
+  "the_bay": {
+    "canonical_name": "Hudson's Bay",
+    "category": "Shopping",
+    "confidence": "high"
+  },
+  "sport_chek": {
+    "canonical_name": "SportChek",
+    "category": "Shopping",
+    "confidence": "high"
+  },
+  "marks": {
+    "canonical_name": "Mark's",
+    "category": "Shopping",
+    "confidence": "high"
+  },
+  "old_navy": {
+    "canonical_name": "Old Navy",
+    "category": "Shopping",
+    "confidence": "high"
+  },
+  "gap": {
+    "canonical_name": "Gap",
+    "category": "Shopping",
+    "confidence": "high"
+  },
+  "uniqlo": {
+    "canonical_name": "Uniqlo",
+    "category": "Shopping",
+    "confidence": "high"
+  },
+  "zara": {
+    "canonical_name": "Zara",
+    "category": "Shopping",
+    "confidence": "high"
+  },
+  "h_and_m": {
+    "canonical_name": "H&M",
+    "category": "Shopping",
+    "confidence": "high"
+  },
+  "goodlife_fitness": {
+    "canonical_name": "GoodLife Fitness",
+    "category": "Health & Fitness",
+    "confidence": "high"
+  },
+  "planet_fitness": {
+    "canonical_name": "Planet Fitness",
+    "category": "Health & Fitness",
+    "confidence": "high"
+  },
+  "la_fitness": {
+    "canonical_name": "LA Fitness",
+    "category": "Health & Fitness",
+    "confidence": "high"
+  },
+  "shoppers_drug_mart": {
+    "canonical_name": "Shoppers Drug Mart",
+    "category": "Health & Fitness",
+    "confidence": "high"
+  },
+  "rexall": {
+    "canonical_name": "Rexall",
+    "category": "Health & Fitness",
+    "confidence": "high"
+  },
+  "pharma_plus": {
+    "canonical_name": "Pharma Plus",
+    "category": "Health & Fitness",
+    "confidence": "high"
+  },
+  "costco": {
+    "canonical_name": "Costco",
+    "category": "Groceries",
+    "confidence": "high"
+  },
+  "petro_canada": {
+    "canonical_name": "Petro-Canada",
+    "category": "Transportation",
+    "confidence": "high"
+  },
+  "esso": {
+    "canonical_name": "Esso",
+    "category": "Transportation",
+    "confidence": "high"
+  },
+  "shell": {
+    "canonical_name": "Shell",
+    "category": "Transportation",
+    "confidence": "high"
+  },
+  "ttc": {
+    "canonical_name": "TTC",
+    "category": "Transportation",
+    "confidence": "high"
+  },
+  "presto": {
+    "canonical_name": "Presto",
+    "category": "Transportation",
+    "confidence": "high"
+  },
+  "go_transit": {
+    "canonical_name": "GO Transit",
+    "category": "Transportation",
+    "confidence": "high"
+  },
+  "expedia": {
+    "canonical_name": "Expedia",
+    "category": "Travel",
+    "confidence": "high"
+  },
+  "booking_com": {
+    "canonical_name": "Booking.com",
+    "category": "Travel",
+    "confidence": "high"
+  },
+  "airbnb": {
+    "canonical_name": "Airbnb",
+    "category": "Travel",
+    "confidence": "high"
+  },
+  "air_canada": {
+    "canonical_name": "Air Canada",
+    "category": "Travel",
+    "confidence": "high"
+  },
+  "westjet": {
+    "canonical_name": "WestJet",
+    "category": "Travel",
+    "confidence": "high"
+  },
+  "cineplex": {
+    "canonical_name": "Cineplex",
+    "category": "Entertainment",
+    "confidence": "high"
+  },
+  "lcbo": {
+    "canonical_name": "LCBO",
+    "category": "Alcohol & Tobacco",
+    "confidence": "high"
+  },
+  "beer_store": {
+    "canonical_name": "The Beer Store",
+    "category": "Alcohol & Tobacco",
+    "confidence": "high"
+  },
+  "internal_transfer": {
+    "canonical_name": "Internal Transfer",
+    "category": "Transfers",
+    "confidence": "high"
+  },
+  "interac_e_transfer": {
+    "canonical_name": "Interac e-Transfer",
+    "category": "Transfers",
+    "confidence": "high"
+  }
+}

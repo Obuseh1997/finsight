@@ -1,0 +1,496 @@
+{
+  "extracted_at": "2025-12-16T20:00:29.536Z",
+  "source_file": "/Users/emekeobuseh/Downloads/CIBC Statement - Nov 25.pdf",
+  "transactions": [
+    {
+      "date": "Nov 24",
+      "description": "CORRECTION VISA DEBIT RETAIL  PURCHASE CORRECTION VISA DEBIT RETAIL  PURCHASE",
+      "merchant": "CORRECTION CORRECTION VISA DEBIT RETAIL PURCHASE",
+      "amount": 5.3,
+      "type": "credit",
+      "withdrawal": 19.85,
+      "deposit": 5.3,
+      "balance": 2485.91
+    },
+    {
+      "date": "Nov 24",
+      "description": "PREAUTHORIZED DEBIT CORRECTION VISA DEBIT RETAIL  PURCHASE CORRECTION",
+      "merchant": "CORRECTION CORRECTION",
+      "amount": 18.39,
+      "type": "credit",
+      "withdrawal": 12.82,
+      "deposit": 18.39,
+      "balance": 2504.3
+    },
+    {
+      "date": "Nov 24",
+      "description": "Wealthsimple Investments Inc. UBER CANADA/UBE   531300447572 UBER CANADA/UBE   532020184927 UBER CANADA/UBE   532715208958",
+      "merchant": "Uber",
+      "amount": 74,
+      "type": "credit",
+      "withdrawal": null,
+      "deposit": 74,
+      "balance": null
+    },
+    {
+      "date": "Nov 24",
+      "description": "PREAUTHORIZED DEBIT VISA DEBIT RETAIL  PURCHASE CORRECTION VISA DEBIT RETAIL  PURCHASE",
+      "merchant": "CORRECTION VISA DEBIT RETAIL PURCHASE",
+      "amount": 12.52,
+      "type": "credit",
+      "withdrawal": 19.61,
+      "deposit": 12.52,
+      "balance": 2484.69
+    },
+    {
+      "date": "Nov 24",
+      "description": "",
+      "merchant": "Unknown",
+      "amount": 1306,
+      "type": "credit",
+      "withdrawal": null,
+      "deposit": 1306,
+      "balance": null
+    },
+    {
+      "date": "Nov 4",
+      "description": "E-TRANSFER        011408822542 VISA DEBIT RETAIL  PURCHASE VISA DEBIT RETAIL  PURCHASE VISA DEBIT RETAIL  PURCHASE",
+      "merchant": "E-Transfer VISA DEBIT RETAIL PURCHASE VISA DEBIT RETAIL PURCHASE",
+      "amount": 42,
+      "type": "credit",
+      "withdrawal": 15.67,
+      "deposit": 42,
+      "balance": 2469.02
+    },
+    {
+      "date": "Nov 5",
+      "description": "INTL VISA DEB RETAIL PURCHASE CORRECTION E-TRANSFER        105703830939 CORRECTION",
+      "merchant": "INTL VISA DEB RETAIL PURCHASE CORRECTION E-Transfer CORRECTION",
+      "amount": 15.21,
+      "type": "credit",
+      "withdrawal": 70,
+      "deposit": 15.21,
+      "balance": 2484.23
+    },
+    {
+      "date": "Nov 5",
+      "description": "",
+      "merchant": "Unknown",
+      "amount": -21.8,
+      "type": "debit",
+      "withdrawal": 21.8,
+      "deposit": null,
+      "balance": null
+    },
+    {
+      "date": "Nov 5",
+      "description": "",
+      "merchant": "Unknown",
+      "amount": -21.59,
+      "type": "debit",
+      "withdrawal": 21.59,
+      "deposit": null,
+      "balance": null
+    },
+    {
+      "date": "Nov 5",
+      "description": "",
+      "merchant": "Unknown",
+      "amount": -10,
+      "type": "debit",
+      "withdrawal": 10,
+      "deposit": null,
+      "balance": null
+    },
+    {
+      "date": "Nov 5",
+      "description": "",
+      "merchant": "Unknown",
+      "amount": -1139.23,
+      "type": "debit",
+      "withdrawal": 1139.23,
+      "deposit": null,
+      "balance": null
+    },
+    {
+      "date": "Nov 5",
+      "description": "",
+      "merchant": "Unknown",
+      "amount": -18.67,
+      "type": "debit",
+      "withdrawal": 18.67,
+      "deposit": null,
+      "balance": null
+    },
+    {
+      "date": "Nov 5",
+      "description": "",
+      "merchant": "Unknown",
+      "amount": -3593.46,
+      "type": "debit",
+      "withdrawal": 3593.46,
+      "deposit": null,
+      "balance": null
+    },
+    {
+      "date": "Nov 5",
+      "description": "",
+      "merchant": "Unknown",
+      "amount": -10,
+      "type": "debit",
+      "withdrawal": 10,
+      "deposit": null,
+      "balance": null
+    },
+    {
+      "date": "Nov 5",
+      "description": "",
+      "merchant": "Unknown",
+      "amount": -20.73,
+      "type": "debit",
+      "withdrawal": 20.73,
+      "deposit": null,
+      "balance": null
+    },
+    {
+      "date": "Nov 5",
+      "description": "",
+      "merchant": "Unknown",
+      "amount": -20,
+      "type": "debit",
+      "withdrawal": 20,
+      "deposit": null,
+      "balance": null
+    },
+    {
+      "date": "Nov 5",
+      "description": "",
+      "merchant": "Unknown",
+      "amount": -180.78,
+      "type": "debit",
+      "withdrawal": 180.78,
+      "deposit": null,
+      "balance": null
+    },
+    {
+      "date": "Nov 5",
+      "description": "",
+      "merchant": "Unknown",
+      "amount": -26.66,
+      "type": "debit",
+      "withdrawal": 26.66,
+      "deposit": null,
+      "balance": null
+    },
+    {
+      "date": "Nov 5",
+      "description": "",
+      "merchant": "Unknown",
+      "amount": -26.03,
+      "type": "debit",
+      "withdrawal": 26.03,
+      "deposit": null,
+      "balance": null
+    },
+    {
+      "date": "Nov 5",
+      "description": "",
+      "merchant": "Unknown",
+      "amount": -50,
+      "type": "debit",
+      "withdrawal": 50,
+      "deposit": null,
+      "balance": null
+    },
+    {
+      "date": "Nov 21",
+      "description": "One-time contact DEPOSIT VISA DEBIT RETAIL  PURCHASE VISA DEBIT RETAIL  PURCHASE",
+      "merchant": "One-time contact VISA DEBIT RETAIL PURCHASE",
+      "amount": 1232,
+      "type": "credit",
+      "withdrawal": 29.8,
+      "deposit": 1232,
+      "balance": 3161.21
+    },
+    {
+      "date": "Nov 21",
+      "description": "VISA DEBIT RETAIL  PURCHASE AE/EI WWW.SPORTCHEK.C   532500175915 UBER CANADA/UBE   532822237236",
+      "merchant": "Uber",
+      "amount": -20.67,
+      "type": "debit",
+      "withdrawal": 20.67,
+      "deposit": null,
+      "balance": 857.7
+    },
+    {
+      "date": "Nov 21",
+      "description": "UBER CANADA/UBE   531117273274 VISA DEBIT RETAIL  PURCHASE VISA DEBIT RETAIL  PURCHASE E-TRANSFER        011492910685",
+      "merchant": "Uber",
+      "amount": 45,
+      "type": "credit",
+      "withdrawal": 203.39,
+      "deposit": 45,
+      "balance": 3206.21
+    },
+    {
+      "date": "Nov 21",
+      "description": "PREAUTHORIZED DEBIT Uber Holdings C   531822275568 WWW.MARKS.COM     532500309602 OSHIORIAHME MOMOH",
+      "merchant": "Uber",
+      "amount": -250,
+      "type": "debit",
+      "withdrawal": 250,
+      "deposit": null,
+      "balance": 607.7
+    },
+    {
+      "date": "Nov 17",
+      "description": "1005802179 INT VISA DEB PURCHASE REVERSAL VISA DEBIT RETAIL  PURCHASE PREAUTHORIZED DEBIT",
+      "merchant": "INT VISA DEB PURCHASE REVERSAL",
+      "amount": 16.68,
+      "type": "credit",
+      "withdrawal": 82.47,
+      "deposit": 16.68,
+      "balance": 3123.74
+    },
+    {
+      "date": "Nov 3",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "merchant": "Unknown",
+      "amount": -6.95,
+      "type": "debit",
+      "withdrawal": 6.95,
+      "deposit": null,
+      "balance": 1132.28
+    },
+    {
+      "date": "Nov 26",
+      "description": "VISA DEBIT RETAIL  PURCHASE 16.68 CAD @ 1.000000 CORRECTION VISA DEBIT RETAIL  PURCHASE",
+      "merchant": "16.68 CAD @ 1.000000 CORRECTION VISA DEBIT RETAIL PURCHASE",
+      "amount": 6.83,
+      "type": "credit",
+      "withdrawal": 17.01,
+      "deposit": 6.83,
+      "balance": 3106.73
+    },
+    {
+      "date": "Nov 26",
+      "description": "UBER CANADA/UBE   531118230292 VISA DEBIT RETAIL  PURCHASE UBER CANADA/UBE   532516325614 UBER CANADA/UBE   533017260057",
+      "merchant": "Uber",
+      "amount": -12.34,
+      "type": "debit",
+      "withdrawal": 12.34,
+      "deposit": null,
+      "balance": 1385.51
+    },
+    {
+      "date": "Nov 26",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "merchant": "Unknown",
+      "amount": -17.88,
+      "type": "debit",
+      "withdrawal": 17.88,
+      "deposit": null,
+      "balance": 1114.4
+    },
+    {
+      "date": "Nov 26",
+      "description": "VISA DEBIT RETAIL  PURCHASE UBER CANADA/UBE   531910297418",
+      "merchant": "Uber",
+      "amount": -16.68,
+      "type": "debit",
+      "withdrawal": 16.68,
+      "deposit": null,
+      "balance": 581.65
+    },
+    {
+      "date": "Nov 28",
+      "description": "PREAUTHORIZED DEBIT E-TRANSFER        011429636956",
+      "merchant": "E-Transfer",
+      "amount": 300,
+      "type": "credit",
+      "withdrawal": 250,
+      "deposit": 300,
+      "balance": 3406.73
+    },
+    {
+      "date": "Nov 28",
+      "description": "UBER CANADA/UBE   531119326733 VISA DEBIT RETAIL  PURCHASE 1005802179 Raynard Omongbale",
+      "merchant": "Uber",
+      "amount": -12.98,
+      "type": "debit",
+      "withdrawal": 12.98,
+      "deposit": null,
+      "balance": 1372.53
+    },
+    {
+      "date": "Nov 28",
+      "description": "VISA DEBIT PURCHASE REVERSAL",
+      "merchant": "REVERSAL",
+      "amount": 17.88,
+      "type": "credit",
+      "withdrawal": null,
+      "deposit": 17.88,
+      "balance": 1132.28
+    },
+    {
+      "date": "Nov 28",
+      "description": "E-TRANSFER        105692053995 UBER CANADA/UBE   531921153256 CIBC Securities Inc. SERVICE CHARGE",
+      "merchant": "Uber",
+      "amount": -16.95,
+      "type": "debit",
+      "withdrawal": 16.95,
+      "deposit": null,
+      "balance": 3389.78
+    },
+    {
+      "date": "Nov 24",
+      "description": "lemonade CORRECTION VISA DEBIT RETAIL  PURCHASE CAPPED MONTHLY FEE$16.95",
+      "merchant": "lemonade CORRECTION CAPPED MONTHLY FEE$16.95",
+      "amount": 12.34,
+      "type": "credit",
+      "withdrawal": 5.57,
+      "deposit": 12.34,
+      "balance": 95.14
+    },
+    {
+      "date": "Nov 24",
+      "description": "VISA DEBIT MERCHANDISE RET REV",
+      "merchant": "VISA DEBIT MERCHANDISE RET REV",
+      "amount": -9.28,
+      "type": "debit",
+      "withdrawal": 9.28,
+      "deposit": null,
+      "balance": 1123
+    },
+    {
+      "date": "Nov 24",
+      "description": "VISA DEBIT RETAIL  PURCHASE UBER CANADA/UBE   531910297418 UBER CANADA/UBE   532518146307 RECORD-KEEPING  N/A",
+      "merchant": "Uber",
+      "amount": -32.86,
+      "type": "debit",
+      "withdrawal": 32.86,
+      "deposit": null,
+      "balance": 348.79
+    },
+    {
+      "date": "Nov 24",
+      "description": "UBER CANADA/UBE   531122481888 VISA DEBIT RETAIL  PURCHASE VISA DEBIT RETAIL  PURCHASE SERVICE CHARGE DISCOUNT",
+      "merchant": "Uber",
+      "amount": 16.95,
+      "type": "credit",
+      "withdrawal": 19.78,
+      "deposit": 16.95,
+      "balance": 3406.73
+    },
+    {
+      "date": "Nov 24",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "merchant": "Unknown",
+      "amount": -8.29,
+      "type": "debit",
+      "withdrawal": 8.29,
+      "deposit": null,
+      "balance": 1114.71
+    },
+    {
+      "date": "Nov 24",
+      "description": "VISA DEBIT RETAIL  PURCHASE UBER CANADA/UBE   532000273007 UBER CANADA/UBE   532521489646",
+      "merchant": "Uber",
+      "amount": -16.83,
+      "type": "debit",
+      "withdrawal": 16.83,
+      "deposit": null,
+      "balance": 331.96
+    },
+    {
+      "date": "Nov 24",
+      "description": "UBER CANADA/UBE   531206347911 VISA DEBIT RETAIL  PURCHASE DEPOSIT",
+      "merchant": "Uber",
+      "amount": 2464,
+      "type": "credit",
+      "withdrawal": 12.52,
+      "deposit": 2464,
+      "balance": 2539.36
+    },
+    {
+      "date": "Nov 24",
+      "description": "E-TRANSFER        105683963543",
+      "merchant": "E-Transfer",
+      "amount": -100,
+      "type": "debit",
+      "withdrawal": 100,
+      "deposit": null,
+      "balance": 1014.71
+    },
+    {
+      "date": "Nov 24",
+      "description": "INTERNET TRANSFER 000000212946 UBER CANADA/UBE   532009460712 AE/EI",
+      "merchant": "Uber",
+      "amount": 800,
+      "type": "credit",
+      "withdrawal": null,
+      "deposit": 800,
+      "balance": 1131.96
+    },
+    {
+      "date": "Nov 24",
+      "description": "INTERNET TRANSFER 000000213165 E-TRANSFER        105702593446 VISA DEBIT RETAIL  PURCHASE",
+      "merchant": "Internet Transfer E-Transfer",
+      "amount": -15.21,
+      "type": "debit",
+      "withdrawal": 15.21,
+      "deposit": null,
+      "balance": 2524.15
+    },
+    {
+      "date": "Nov 24",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "merchant": "Unknown",
+      "amount": -14.66,
+      "type": "debit",
+      "withdrawal": 14.66,
+      "deposit": null,
+      "balance": 1000.05
+    },
+    {
+      "date": "Nov 24",
+      "description": "VISA DEBIT RETAIL  PURCHASE LightHouse UBER CANADA/UBE   532711254388",
+      "merchant": "Uber",
+      "amount": -5.66,
+      "type": "debit",
+      "withdrawal": 5.66,
+      "deposit": null,
+      "balance": 333.88
+    },
+    {
+      "date": "Nov 24",
+      "description": "UBER CANADA/UBE   531300447572 VISA DEBIT RETAIL  PURCHASE VISA DEBIT RETAIL  PURCHASE",
+      "merchant": "Uber",
+      "amount": -18.39,
+      "type": "debit",
+      "withdrawal": 18.39,
+      "deposit": null,
+      "balance": 2505.76
+    },
+    {
+      "date": "Nov 24",
+      "description": "VISA DEBIT RETAIL  PURCHASE",
+      "merchant": "Unknown",
+      "amount": -15.02,
+      "type": "debit",
+      "withdrawal": 15.02,
+      "deposit": null,
+      "balance": 985.03
+    },
+    {
+      "date": "Nov 24",
+      "description": "VISA DEBIT RETAIL  PURCHASE UBER CANADA/UBE   532011426426 UBER CANADA/UBE   532715208958",
+      "merchant": "Uber",
+      "amount": -16.8,
+      "type": "debit",
+      "withdrawal": 16.8,
+      "deposit": null,
+      "balance": 317.08
+    }
+  ]
+}
