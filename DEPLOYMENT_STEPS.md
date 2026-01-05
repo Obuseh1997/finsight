@@ -1,4 +1,4 @@
-# Quick Deployment Guide
+# Quick Deployment Guide - Vercel + GitHub
 
 ## ✅ Cleanup Complete
 
@@ -12,10 +12,10 @@
 - `README.md` - Comprehensive production README
 - `DEPLOYMENT.md` - Full deployment guide
 - `requirements.txt` - Python dependencies
-- `netlify.toml` - Netlify configuration
+- `vercel.json` - Vercel configuration
 - `.gitignore` - Already exists, properly configured
 
-## 🚀 Next Steps: Deploy to GitHub + Netlify
+## 🚀 Deploy to GitHub + Vercel (Auto-Deploy)
 
 ### Step 1: Initialize Git Repository
 
@@ -32,14 +32,14 @@ git add .
 git commit -m "feat: Initial production release - FinSight v1.0"
 ```
 
-### Step 2: Create GitHub Repository
+### Step 2: Create GitHub Repository & Push
 
-**Option A: Using GitHub CLI (if installed)**
+**Using GitHub CLI (Recommended):**
 ```bash
 gh repo create finsight --public --source=. --remote=origin --push
 ```
 
-**Option B: Manual (via GitHub website)**
+**Manual (via GitHub website):**
 1. Go to https://github.com/new
 2. Repository name: `finsight`
 3. Description: "Private bank statement insights tool - 100% local processing"
@@ -54,64 +54,104 @@ git branch -M main
 git push -u origin main
 ```
 
-### Step 3: Deploy to Netlify
+### Step 3: Deploy to Vercel
 
-1. Go to https://app.netlify.com
-2. Click "Add new site" → "Import an existing project"
-3. Choose "Deploy with GitHub"
-4. Authorize GitHub if needed
-5. Select your `finsight` repository
-6. Netlify will auto-detect settings from `netlify.toml`:
-   - Base directory: `pdf-insights-app`
-   - Build command: `npm install && npm run build`
-   - Publish directory: `.next`
-7. Click "Deploy site"
+**Option A: Via Vercel Dashboard (Easiest)**
 
-**First deployment takes 2-3 minutes**
+1. Go to https://vercel.com/dashboard
+2. Click "Add New..." → "Project"
+3. Click "Import Git Repository"
+4. Select your `finsight` repository
+5. Vercel will auto-detect Next.js:
+   - **Framework Preset**: Next.js
+   - **Root Directory**: `pdf-insights-app`
+   - **Build Command**: Auto-detected
+   - **Output Directory**: Auto-detected
+6. Click "Deploy"
 
-### Step 4: Verify Deployment
+**Option B: Via Vercel CLI**
 
-Once deployed, you'll get a URL like: `https://finsight-abc123.netlify.app`
+```bash
+# Install Vercel CLI globally
+npm install -g vercel
+
+# Login to Vercel
+vercel login
+
+# Navigate to Next.js app
+cd pdf-insights-app
+
+# Deploy to production
+vercel --prod
+
+# Follow prompts:
+# - Link to existing project? No
+# - Project name? finsight
+# - Directory? ./
+```
+
+**First deployment takes 1-2 minutes**
+
+### Step 4: Configure Project Settings (Important!)
+
+After first deployment, in Vercel dashboard:
+
+1. Go to Project Settings → General
+2. **Root Directory**: Set to `pdf-insights-app`
+3. **Build & Development Settings**:
+   - Build Command: `npm run build`
+   - Output Directory: `.next`
+   - Install Command: `npm install`
+
+4. **Environment Variables** (if needed in future):
+   - Currently none required for local processing
+
+### Step 5: Verify Deployment
+
+You'll get a URL like: `https://finsight.vercel.app`
 
 Test it:
-1. Visit the URL
-2. Upload a sample PDF statement
-3. Verify the full pipeline works
-4. Test CSV download
-5. Check dark mode
+1. ✅ Visit the URL
+2. ✅ Upload a sample PDF statement
+3. ✅ Verify extraction works
+4. ✅ Review low-confidence transactions
+5. ✅ View insights page
+6. ✅ Download CSV report
+7. ✅ Test dark mode toggle
 
-### Step 5: (Optional) Custom Domain
+### Step 6: (Optional) Custom Domain
 
-1. In Netlify dashboard: Site settings → Domain management
-2. Add custom domain
-3. Follow Netlify's DNS instructions
-4. HTTPS automatically enabled via Let's Encrypt
+1. In Vercel dashboard: Project Settings → Domains
+2. Add your domain (e.g., `finsight.app`)
+3. Follow DNS configuration instructions
+4. HTTPS automatically enabled
 
-## 🔄 Continuous Deployment is Now Active!
+## 🔄 Auto-Deployment is Now Active!
 
-From now on:
+**Git is now your source of truth.** Every push to `main` automatically deploys:
+
 ```bash
 # Make changes locally
 git add .
 git commit -m "feat: Add new feature"
 git push origin main
 
-# Netlify automatically:
+# Vercel automatically:
 # 1. Detects push to main
-# 2. Runs build
+# 2. Runs build (1-2 min)
 # 3. Deploys new version
-# 4. ~2 minutes later, site is updated
+# 4. Your site is updated!
 ```
 
 ## 📋 Deployment Checklist
 
-- [ ] Files cleaned up (✅ DONE)
-- [ ] README updated (✅ DONE)
-- [ ] netlify.toml created (✅ DONE)
-- [ ] requirements.txt created (✅ DONE)
+- [x] Files cleaned up (✅ DONE)
+- [x] README updated (✅ DONE)
+- [x] vercel.json created (✅ DONE)
+- [x] requirements.txt created (✅ DONE)
 - [ ] Git repository initialized
 - [ ] Code pushed to GitHub
-- [ ] Netlify site created
+- [ ] Vercel project created
 - [ ] First deployment successful
 - [ ] Full pipeline tested on live site
 - [ ] Custom domain configured (optional)
@@ -137,8 +177,16 @@ git push origin feature/add-bmo-parser
 
 # Create Pull Request on GitHub
 # After review, merge to main
-# Netlify auto-deploys!
+# Vercel auto-deploys production!
 ```
+
+### Preview Deployments
+
+Vercel automatically creates preview deployments for:
+- Every push to non-main branches
+- Every pull request
+
+Each gets a unique URL like: `https://finsight-git-feature-abc.vercel.app`
 
 ### Hotfixes
 
@@ -151,23 +199,31 @@ git add .
 git commit -m "fix: Critical bug in CIBC parser"
 git push origin hotfix/fix-critical-bug
 
-# Merge to main → Auto-deploy
+# Merge to main → Auto-deploy to production
 ```
 
 ## 🐛 Troubleshooting
 
-### Build fails on Netlify
+### Build fails on Vercel
 
-Check build logs in Netlify dashboard. Common issues:
-- Node version mismatch (should be 18)
-- Missing dependencies (ensure package-lock.json is committed)
-- Python errors (check requirements.txt)
+**Check build logs in Vercel dashboard.**
 
-### Python functions timeout
+Common issues:
+- **Wrong root directory**: Should be `pdf-insights-app`
+- **Missing dependencies**: Ensure `package-lock.json` is committed
+- **Node version**: Vercel uses Node 18 by default (correct)
 
-- Netlify free tier: 10s function timeout
-- Upgrade to Netlify Pro for 26s timeout
-- Or optimize Python scripts
+Fix in Project Settings → General → Root Directory
+
+### Python scripts don't work
+
+**Note**: Vercel doesn't support Python serverless functions on Hobby plan.
+
+**Solutions**:
+1. **Upgrade to Vercel Pro** ($20/mo) - enables custom runtimes
+2. **Current setup works** - Python runs via Next.js API routes calling child processes (already configured)
+
+Our implementation uses child processes (`child_process.spawn`) to run Python from Node.js API routes, which works on Hobby plan.
 
 ### Large file upload fails
 
@@ -175,24 +231,92 @@ In `pdf-insights-app/next.config.ts`, increase:
 ```typescript
 experimental: {
   serverActions: {
-    bodySizeLimit: '20mb', // Increase if needed
+    bodySizeLimit: '20mb', // Adjust as needed
   },
 },
 ```
 
-## 📞 Support
+Then redeploy:
+```bash
+git add pdf-insights-app/next.config.ts
+git commit -m "fix: Increase upload size limit"
+git push origin main
+```
 
-- **Netlify Docs**: https://docs.netlify.com
-- **Next.js Docs**: https://nextjs.org/docs
-- **Project Issues**: Create GitHub issue on your repo
+### Function timeout errors
+
+Vercel Hobby plan: 10s timeout
+Vercel Pro plan: 60s timeout
+
+If processing takes >10s, optimize Python scripts or upgrade plan.
+
+## 📊 Monitoring
+
+### Vercel Dashboard
+
+- **Deployments**: See all deployments, logs, and status
+- **Analytics**: Page views, performance (requires Vercel Pro)
+- **Logs**: Real-time function execution logs
+- **Insights**: Core Web Vitals, performance metrics
+
+### Health Check
+
+```bash
+# Check if site is up
+curl https://finsight.vercel.app
+
+# Check API routes
+curl https://finsight.vercel.app/api/extract
+# Should return 405 Method Not Allowed (expected for GET)
+```
+
+## 🔒 Security
+
+- [x] No API keys in Git (currently none used)
+- [x] HTTPS enabled automatically
+- [x] Environment variables encrypted in Vercel
+- [x] File upload size limits enforced
+- [x] PII scrubbing active
+
+## 🎉 Deployment Complete!
+
+**Your workflow is now:**
+1. Code locally
+2. `git push origin main`
+3. Vercel auto-builds and deploys
+4. Live in 1-2 minutes!
+
+**Git = Source of Truth**
+**Vercel = Automatic CI/CD**
 
 ---
 
-## 🎉 You're Ready to Deploy!
+## Quick Commands Reference
 
-Run the commands above and your FinSight app will be live in minutes.
+```bash
+# Daily workflow
+git add .
+git commit -m "feat: Your change description"
+git push origin main
 
-**Git = Source of Truth**
-**Netlify = Auto-deployment on every push to main**
+# Create feature branch
+git checkout -b feature/your-feature
+git push origin feature/your-feature
 
-Questions? Check [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions.
+# Update from main
+git checkout main
+git pull origin main
+
+# Deploy manually (if needed)
+vercel --prod
+```
+
+---
+
+## 📞 Support
+
+- **Vercel Docs**: https://vercel.com/docs
+- **Next.js Docs**: https://nextjs.org/docs
+- **GitHub Issues**: Create issue on your repo
+
+**Questions?** Check [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions.
