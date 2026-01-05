@@ -410,7 +410,7 @@ export default function ReviewPage() {
                         {group.transactions[0]?.matched ? 'Bank Transaction' : 'Full Original Transaction (Unscrubbed)'}
                       </p>
                       <p className="text-sm font-mono text-[hsl(var(--foreground))] leading-relaxed">
-                        {group.transactions[0]?.original_description || group.description}
+                        {group.transactions[0]?.description || group.description}
                       </p>
                       <p className="text-xs text-[hsl(var(--muted-foreground))] mt-2">
                         {group.transactions[0]?.matched
