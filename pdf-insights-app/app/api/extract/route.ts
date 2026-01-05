@@ -1,22 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { writeFile, unlink } from 'fs/promises';
-import { exec } from 'child_process';
-import { promisify } from 'util';
-import path from 'path';
-import os from 'os';
-
-const execAsync = promisify(exec);
 
 /**
- * Extract transactions from uploaded PDFs using Python script
+ * Extract transactions from uploaded PDFs via Railway Python API
  * POST /api/extract
  */
 export async function POST(request: NextRequest) {
-  const tempFiles: string[] = [];
-
   try {
     const formData = await request.formData();
-    const results = [];
 
     // Get all PDF files from form data
     const files: File[] = [];
@@ -33,105 +23,39 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Process each PDF
-    for (const file of files) {
-      const bytes = await file.arrayBuffer();
-      const buffer = Buffer.from(bytes);
+    // Convert files to base64 for API transmission
+    const filesData = await Promise.all(
+      files.map(async (file) => {
+        const bytes = await file.arrayBuffer();
+        const buffer = Buffer.from(bytes);
+        const base64 = buffer.toString('base64');
 
-      // Save to temp file
-      const tempPdfPath = path.join(os.tmpdir(), `upload_${Date.now()}_${file.name}`);
-      const tempJsonPath = path.join(os.tmpdir(), `extract_${Date.now()}.json`);
+        return {
+          name: file.name,
+          data: base64,
+        };
+      })
+    );
 
-      tempFiles.push(tempPdfPath, tempJsonPath);
+    // Call Railway Python API
+    const apiUrl = process.env.PYTHON_API_URL || 'http://localhost:8000';
+    const response = await fetch(`${apiUrl}/api/extract`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ files: filesData }),
+    });
 
-      await writeFile(tempPdfPath, buffer);
-
-      // Call Python extraction script
-      const pythonScriptPath = path.join(process.cwd(), '..', 'extract-pdfplumber.py');
-      const command = `python3 ${pythonScriptPath} "${tempPdfPath}" "${tempJsonPath}" --scrub`;
-
-      console.log(`Executing: ${command}`);
-
-      try {
-        const { stdout, stderr } = await execAsync(command, {
-          timeout: 60000, // 60 second timeout
-        });
-
-        if (stderr) {
-          console.error('Python stderr:', stderr);
-        }
-
-        console.log('Python stdout:', stdout);
-
-        // Read the extracted JSON
-        const { readFile } = await import('fs/promises');
-        const extractedData = await readFile(tempJsonPath, 'utf-8');
-        const parsedData = JSON.parse(extractedData);
-
-        // NEW: Build merchant dictionary from extracted transactions
-        const buildDictScriptPath = path.join(process.cwd(), '..', 'build_dictionary.py');
-        const dictPath = path.join(process.cwd(), '..', 'merchant_dictionary.json');
-        const buildDictCommand = `python3 ${buildDictScriptPath} "${tempJsonPath}" "${dictPath}"`;
-
-        console.log(`Building dictionary: ${buildDictCommand}`);
-
-        try {
-          const { stdout: dictStdout, stderr: dictStderr } = await execAsync(buildDictCommand, {
-            timeout: 30000, // 30 second timeout
-          });
-
-          if (dictStdout) {
-            console.log('Dictionary build stdout:', dictStdout);
-          }
-          if (dictStderr) {
-            console.error('Dictionary build stderr:', dictStderr);
-          }
-
-          // NEW: Match merchants to assign categories
-          const matchScriptPath = path.join(process.cwd(), '..', 'match_merchants.py');
-          const matchCommand = `python3 ${matchScriptPath} "${tempJsonPath}" "${tempJsonPath}" "${dictPath}"`;
-
-          console.log(`Matching merchants: ${matchCommand}`);
-
-          const { stdout: matchStdout, stderr: matchStderr } = await execAsync(matchCommand, {
-            timeout: 30000,
-          });
-
-          if (matchStdout) {
-            console.log('Merchant matching stdout:', matchStdout);
-          }
-          if (matchStderr) {
-            console.error('Merchant matching stderr:', matchStderr);
-          }
-
-          // Re-read the matched transactions with categories
-          const matchedData = await readFile(tempJsonPath, 'utf-8');
-          const matchedParsed = JSON.parse(matchedData);
-          results.push(matchedParsed); // Use matched version with categories
-
-        } catch (dictError) {
-          // Don't fail extraction if dictionary building/matching fails - use original
-          console.warn('Dictionary/matching failed (non-fatal):', dictError);
-          results.push(parsedData); // Fallback to original data
-        }
-      } catch (error) {
-        console.error('Python execution error:', error);
-        throw new Error(`Failed to extract ${file.name}: ${error instanceof Error ? error.message : 'Unknown error'}`);
-      }
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({ error: 'Unknown error' }));
+      throw new Error(errorData.error || `API request failed with status ${response.status}`);
     }
 
-    // Cleanup temp files
-    await Promise.all(
-      tempFiles.map(f => unlink(f).catch(err => console.warn(`Failed to delete ${f}:`, err)))
-    );
+    const data = await response.json();
+    return NextResponse.json(data);
 
-    return NextResponse.json({ results });
   } catch (error) {
-    // Cleanup on error
-    await Promise.all(
-      tempFiles.map(f => unlink(f).catch(() => {}))
-    );
-
     console.error('Extract API error:', error);
     return NextResponse.json(
       { error: error instanceof Error ? error.message : 'Extraction failed' },

@@ -1,19 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { writeFile, unlink } from 'fs/promises';
-import { exec } from 'child_process';
-import { promisify } from 'util';
-import path from 'path';
-import os from 'os';
-
-const execAsync = promisify(exec);
 
 /**
- * Merge multiple statement JSONs with deduplication
+ * Merge multiple statement JSONs with deduplication via Railway Python API
  * POST /api/merge
  */
 export async function POST(request: NextRequest) {
-  const tempFiles: string[] = [];
-
   try {
     const body = await request.json();
     const { statements } = body;
@@ -25,58 +16,25 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Save each statement to temp JSON file
-    const tempInputPaths: string[] = [];
-    for (let i = 0; i < statements.length; i++) {
-      const tempPath = path.join(os.tmpdir(), `statement_${Date.now()}_${i}.json`);
-      await writeFile(tempPath, JSON.stringify(statements[i], null, 2));
-      tempInputPaths.push(tempPath);
-      tempFiles.push(tempPath);
+    // Call Railway Python API
+    const apiUrl = process.env.PYTHON_API_URL || 'http://localhost:8000';
+    const response = await fetch(`${apiUrl}/api/merge`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ statements }),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({ error: 'Unknown error' }));
+      throw new Error(errorData.error || `API request failed with status ${response.status}`);
     }
 
-    // Output path for merged result
-    const tempOutputPath = path.join(os.tmpdir(), `merged_${Date.now()}.json`);
-    tempFiles.push(tempOutputPath);
+    const data = await response.json();
+    return NextResponse.json(data.merged || data);
 
-    // Call Python merge script
-    const pythonScriptPath = path.join(process.cwd(), '..', 'merge_statements.py');
-    const inputArgs = tempInputPaths.map(p => `"${p}"`).join(' ');
-    const command = `python3 ${pythonScriptPath} ${inputArgs} --output "${tempOutputPath}"`;
-
-    console.log(`Executing: ${command}`);
-
-    try {
-      const { stdout, stderr } = await execAsync(command, {
-        timeout: 30000, // 30 second timeout
-      });
-
-      if (stderr) {
-        console.error('Python stderr:', stderr);
-      }
-
-      console.log('Python stdout:', stdout);
-
-      // Read the merged JSON
-      const { readFile } = await import('fs/promises');
-      const mergedData = await readFile(tempOutputPath, 'utf-8');
-      const parsedData = JSON.parse(mergedData);
-
-      // Cleanup temp files
-      await Promise.all(
-        tempFiles.map(f => unlink(f).catch(err => console.warn(`Failed to delete ${f}:`, err)))
-      );
-
-      return NextResponse.json(parsedData);
-    } catch (error) {
-      console.error('Python execution error:', error);
-      throw new Error(`Merge failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
-    }
   } catch (error) {
-    // Cleanup on error
-    await Promise.all(
-      tempFiles.map(f => unlink(f).catch(() => {}))
-    );
-
     console.error('Merge API error:', error);
     return NextResponse.json(
       { error: error instanceof Error ? error.message : 'Merge failed' },
