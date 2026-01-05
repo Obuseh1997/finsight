@@ -544,7 +544,7 @@ export default function ReviewPage() {
                     {categorizedGroups.transfers.length} transfer{categorizedGroups.transfers.length > 1 ? 's' : ''} · These are typically bank transfers, Interac, or online payments
                   </p>
                   <div className="space-y-4">
-                    {categorizedGroups.transfers.map(renderTransactionGroup)}
+                    {categorizedGroups.transfers.map(group => renderTransactionGroup(group))}
                   </div>
                 </div>
               )}
@@ -559,7 +559,7 @@ export default function ReviewPage() {
                     {categorizedGroups.subscriptions.length} subscription{categorizedGroups.subscriptions.length > 1 ? 's' : ''} · Recurring charges for services
                   </p>
                   <div className="space-y-4">
-                    {categorizedGroups.subscriptions.map(renderTransactionGroup)}
+                    {categorizedGroups.subscriptions.map(group => renderTransactionGroup(group))}
                   </div>
                 </div>
               )}
@@ -574,7 +574,7 @@ export default function ReviewPage() {
                     {categorizedGroups.merchants.length} merchant{categorizedGroups.merchants.length > 1 ? 's' : ''} · Store and online purchases
                   </p>
                   <div className="space-y-4">
-                    {categorizedGroups.merchants.map(renderTransactionGroup)}
+                    {categorizedGroups.merchants.map(group => renderTransactionGroup(group))}
                   </div>
                 </div>
               )}
