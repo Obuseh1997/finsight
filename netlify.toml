@@ -7,34 +7,6 @@
   NODE_VERSION = "20.9.0"
   PYTHON_VERSION = "3.9"
 
-# Enable Python runtime for serverless functions
-[functions]
-  node_bundler = "esbuild"
-  external_node_modules = ["pdfplumber", "python-dateutil"]
-
-# Next.js specific settings
+# Next.js specific settings - this plugin handles routing automatically
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-
-# Redirect rules for Next.js App Router
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  force = false
-  conditions = {Role = ["admin"]}
-
-# Handle API routes
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
-
-# Headers for security
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
