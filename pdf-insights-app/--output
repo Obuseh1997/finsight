@@ -1,0 +1,728 @@
+{
+  "uber": {
+    "merchant_id": "merchant_uber_067",
+    "canonical_name": "Uber",
+    "category": "Transportation",
+    "aliases": [
+      "uber"
+    ],
+    "created_at": "2025-12-30T01:02:59.112725",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "interac": {
+    "merchant_id": "merchant_interac_067",
+    "canonical_name": "Interac e-Transfer",
+    "category": "Transfers",
+    "aliases": [
+      "interac"
+    ],
+    "created_at": "2025-12-30T01:02:59.112739",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "lyft temp": {
+    "merchant_id": "merchant_lyft_temp_067",
+    "canonical_name": "Lyft *temp AU",
+    "category": "Transportation",
+    "aliases": [
+      "lyft temp"
+    ],
+    "created_at": "2025-12-30T01:02:59.112784",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "debit": {
+    "merchant_id": "merchant_debit_067",
+    "canonical_name": "Unknown",
+    "category": "Uncategorized",
+    "aliases": [
+      "debit"
+    ],
+    "created_at": "2025-12-30T01:02:59.112794",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "spotify": {
+    "merchant_id": "merchant_spotify_067",
+    "canonical_name": "Spotify",
+    "category": "Subscriptions",
+    "aliases": [
+      "spotify"
+    ],
+    "created_at": "2025-12-30T01:02:59.112820",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "food basics": {
+    "merchant_id": "merchant_food_basics_067",
+    "canonical_name": "Food Basics",
+    "category": "Groceries",
+    "aliases": [
+      "food basics"
+    ],
+    "created_at": "2025-12-30T01:02:59.112916",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "good life fitness": {
+    "merchant_id": "merchant_good_life_fitness_067",
+    "canonical_name": "Good Life Fitness",
+    "category": "Health & Fitness",
+    "aliases": [
+      "good life fitness"
+    ],
+    "created_at": "2025-12-30T01:02:59.112776",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "credit memo": {
+    "merchant_id": "merchant_credit_memo_067",
+    "canonical_name": "Credit Memo",
+    "category": "Uncategorized",
+    "aliases": [
+      "credit memo"
+    ],
+    "created_at": "2025-12-30T01:02:57.585087",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "eventbrite feve": {
+    "merchant_id": "merchant_eventbrite_feve_067",
+    "canonical_name": "Eventbrite/feve",
+    "category": "Uncategorized",
+    "aliases": [
+      "eventbrite feve"
+    ],
+    "created_at": "2025-12-30T01:02:57.585100",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "fulfill request chukwuemeke uteh obuseh": {
+    "merchant_id": "merchant_fulfill_request_chukwuemeke_uteh_obuseh_067",
+    "canonical_name": "Internal Transfer",
+    "category": "Transfers",
+    "aliases": [
+      "fulfill request chukwuemeke uteh obuseh"
+    ],
+    "created_at": "2025-12-30T01:02:59.112941",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "ukir tst dopamin": {
+    "merchant_id": "merchant_ukir_tst_dopamin_067",
+    "canonical_name": "23u1kir60000 TST-The Dopamin",
+    "category": "Uncategorized",
+    "aliases": [
+      "ukir tst dopamin"
+    ],
+    "created_at": "2025-12-30T01:02:57.585119",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "ukj tst dopamin": {
+    "merchant_id": "merchant_ukj_tst_dopamin_067",
+    "canonical_name": "23u1kj310000 TST-The Dopamin",
+    "category": "Uncategorized",
+    "aliases": [
+      "ukj tst dopamin"
+    ],
+    "created_at": "2025-12-30T01:02:57.585132",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "lyft cancel": {
+    "merchant_id": "merchant_lyft_cancel_067",
+    "canonical_name": "Lyft *cancel",
+    "category": "Transportation",
+    "aliases": [
+      "lyft cancel"
+    ],
+    "created_at": "2025-12-30T01:02:57.585139",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "korean grill": {
+    "merchant_id": "merchant_korean_grill_067",
+    "canonical_name": "Korean Grill HO",
+    "category": "Uncategorized",
+    "aliases": [
+      "korean grill"
+    ],
+    "created_at": "2025-12-30T01:02:57.585151",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "visa deb lyft temp": {
+    "merchant_id": "merchant_visa_deb_lyft_temp_067",
+    "canonical_name": "Intl Visa DEB Lyft *temp",
+    "category": "Transportation",
+    "aliases": [
+      "visa deb lyft temp"
+    ],
+    "created_at": "2025-12-30T01:02:57.585158",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "reversal lyft temp": {
+    "merchant_id": "merchant_reversal_lyft_temp_067",
+    "canonical_name": "Reversal Lyft *temp AU",
+    "category": "Transportation",
+    "aliases": [
+      "reversal lyft temp"
+    ],
+    "created_at": "2025-12-30T01:02:57.585166",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "amazon prime": {
+    "merchant_id": "merchant_amazon_prime_067",
+    "canonical_name": "Amazon.ca Prime",
+    "category": "Shopping",
+    "aliases": [
+      "amazon prime"
+    ],
+    "created_at": "2025-12-30T01:02:59.112829",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "rabba marche": {
+    "merchant_id": "merchant_rabba_marche_067",
+    "canonical_name": "Rabba Marche #1",
+    "category": "Uncategorized",
+    "aliases": [
+      "rabba marche"
+    ],
+    "created_at": "2025-12-30T01:02:57.585186",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "red arrow ebus": {
+    "merchant_id": "merchant_red_arrow_ebus_067",
+    "canonical_name": "RED Arrow/ebus/",
+    "category": "Uncategorized",
+    "aliases": [
+      "red arrow ebus"
+    ],
+    "created_at": "2025-12-30T01:02:57.585198",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "fika distillery": {
+    "merchant_id": "merchant_fika_distillery_067",
+    "canonical_name": "Fika Distillery",
+    "category": "Uncategorized",
+    "aliases": [
+      "fika distillery"
+    ],
+    "created_at": "2025-12-30T01:02:57.585209",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "harvey": {
+    "merchant_id": "merchant_harvey_067",
+    "canonical_name": "Harvey's #00025",
+    "category": "Uncategorized",
+    "aliases": [
+      "harvey"
+    ],
+    "created_at": "2025-12-30T01:02:57.585220",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "sooter photog": {
+    "merchant_id": "merchant_sooter_photog_067",
+    "canonical_name": "Sooter's Photog",
+    "category": "Uncategorized",
+    "aliases": [
+      "sooter photog"
+    ],
+    "created_at": "2025-12-30T01:02:57.585232",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "green fresh sup": {
+    "merchant_id": "merchant_green_fresh_sup_067",
+    "canonical_name": "Green Fresh SUP",
+    "category": "Uncategorized",
+    "aliases": [
+      "green fresh sup"
+    ],
+    "created_at": "2025-12-30T01:02:58.741467",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "rexall pharmacy": {
+    "merchant_id": "merchant_rexall_pharmacy_067",
+    "canonical_name": "Rexall Pharmacy",
+    "category": "Health & Fitness",
+    "aliases": [
+      "rexall pharmacy"
+    ],
+    "created_at": "2025-12-30T01:02:59.112859",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "wyse meter solu": {
+    "merchant_id": "merchant_wyse_meter_solu_067",
+    "canonical_name": "Wyse Meter Solu",
+    "category": "Uncategorized",
+    "aliases": [
+      "wyse meter solu"
+    ],
+    "created_at": "2025-12-30T01:02:59.112899",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "paymentus servi": {
+    "merchant_id": "merchant_paymentus_servi_067",
+    "canonical_name": "Paymentus-servi",
+    "category": "Uncategorized",
+    "aliases": [
+      "paymentus servi"
+    ],
+    "created_at": "2025-12-30T01:02:59.112910",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "visa deb pac westjetconn": {
+    "merchant_id": "merchant_visa_deb_pac_westjetconn_067",
+    "canonical_name": "Intl Visa DEB Pac-westjetconn",
+    "category": "Travel",
+    "aliases": [
+      "visa deb pac westjetconn"
+    ],
+    "created_at": "2025-12-30T01:02:57.585285",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "correction lyft temp": {
+    "merchant_id": "merchant_correction_lyft_temp_067",
+    "canonical_name": "Correction Lyft *temp AU",
+    "category": "Transportation",
+    "aliases": [
+      "correction lyft temp"
+    ],
+    "created_at": "2025-12-30T01:02:57.585293",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "atm interac rbc scd": {
+    "merchant_id": "merchant_atm_interac_rbc_scd_067",
+    "canonical_name": "ATM Withdrawal Interac/rbc SCD 0003",
+    "category": "Transfers",
+    "aliases": [
+      "atm interac rbc scd"
+    ],
+    "created_at": "2025-12-30T01:02:57.585298",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "network transaction fee atm gab": {
+    "merchant_id": "merchant_network_transaction_fee_atm_gab_067",
+    "canonical_name": "Network Transaction FEE Atm-canada/gab-canada",
+    "category": "Uncategorized",
+    "aliases": [
+      "network transaction fee atm gab"
+    ],
+    "created_at": "2025-12-30T01:02:57.585313",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "network fee discount": {
+    "merchant_id": "merchant_network_fee_discount_067",
+    "canonical_name": "Network FEE Discount",
+    "category": "Uncategorized",
+    "aliases": [
+      "network fee discount"
+    ],
+    "created_at": "2025-12-30T01:02:57.585325",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "splitsville cre": {
+    "merchant_id": "merchant_splitsville_cre_067",
+    "canonical_name": "Splitsville CRE",
+    "category": "Uncategorized",
+    "aliases": [
+      "splitsville cre"
+    ],
+    "created_at": "2025-12-30T01:02:57.585336",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "uogmw yyc rundle": {
+    "merchant_id": "merchant_uogmw_yyc_rundle_067",
+    "canonical_name": "1uo3gmw00000 3719_YYC_Rundle",
+    "category": "Uncategorized",
+    "aliases": [
+      "uogmw yyc rundle"
+    ],
+    "created_at": "2025-12-30T01:02:57.585348",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "uyhzc yyc rundle": {
+    "merchant_id": "merchant_uyhzc_yyc_rundle_067",
+    "canonical_name": "23uyhz5c0000 3719_YYC_Rundle",
+    "category": "Uncategorized",
+    "aliases": [
+      "uyhzc yyc rundle"
+    ],
+    "created_at": "2025-12-30T01:02:57.585359",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "charge capped monthly fee": {
+    "merchant_id": "merchant_charge_capped_monthly_fee_067",
+    "canonical_name": "Service Charge Capped Monthly Fee$16.95",
+    "category": "Uncategorized",
+    "aliases": [
+      "charge capped monthly fee"
+    ],
+    "created_at": "2025-12-30T01:02:59.112955",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "wealthsimple": {
+    "merchant_id": "merchant_wealthsimple_067",
+    "canonical_name": "Wealthsimple",
+    "category": "Investments",
+    "aliases": [
+      "wealthsimple"
+    ],
+    "created_at": "2025-12-30T01:02:58.741279",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "sport chek": {
+    "merchant_id": "merchant_sport_chek_067",
+    "canonical_name": "Sport Chek",
+    "category": "Uncategorized",
+    "aliases": [
+      "sport chek"
+    ],
+    "created_at": "2025-12-30T01:02:57.941125",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "marks": {
+    "merchant_id": "merchant_marks_067",
+    "canonical_name": "Marks",
+    "category": "Uncategorized",
+    "aliases": [
+      "marks"
+    ],
+    "created_at": "2025-12-30T01:02:57.941167",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "charge discount balance": {
+    "merchant_id": "merchant_charge_discount_balance_067",
+    "canonical_name": "Service Charge Discount balance",
+    "category": "Uncategorized",
+    "aliases": [
+      "charge discount balance"
+    ],
+    "created_at": "2025-12-30T01:02:57.941332",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "coke": {
+    "merchant_id": "merchant_coke_067",
+    "canonical_name": "C Coke_",
+    "category": "Uncategorized",
+    "aliases": [
+      "coke"
+    ],
+    "created_at": "2025-12-30T01:02:59.112753",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "amzn mktp": {
+    "merchant_id": "merchant_amzn_mktp_067",
+    "canonical_name": "Amzn Mktp CA",
+    "category": "Uncategorized",
+    "aliases": [
+      "amzn mktp"
+    ],
+    "created_at": "2025-12-30T01:02:59.112766",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "costco wholesal": {
+    "merchant_id": "merchant_costco_wholesal_067",
+    "canonical_name": "Costco Wholesal",
+    "category": "Groceries",
+    "aliases": [
+      "costco wholesal"
+    ],
+    "created_at": "2025-12-30T01:02:59.112801",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "tropikal": {
+    "merchant_id": "merchant_tropikal_067",
+    "canonical_name": "SQ *tropikal",
+    "category": "Uncategorized",
+    "aliases": [
+      "tropikal"
+    ],
+    "created_at": "2025-12-30T01:02:59.112812",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "cineplex": {
+    "merchant_id": "merchant_cineplex_067",
+    "canonical_name": "Cineplex #8030",
+    "category": "Entertainment",
+    "aliases": [
+      "cineplex"
+    ],
+    "created_at": "2025-12-30T01:02:59.112839",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "sephora rideau": {
+    "merchant_id": "merchant_sephora_rideau_067",
+    "canonical_name": "Sephora Rideau",
+    "category": "Uncategorized",
+    "aliases": [
+      "sephora rideau"
+    ],
+    "created_at": "2025-12-30T01:02:59.112851",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "supplement king": {
+    "merchant_id": "merchant_supplement_king_067",
+    "canonical_name": "Supplement King",
+    "category": "Uncategorized",
+    "aliases": [
+      "supplement king"
+    ],
+    "created_at": "2025-12-30T01:02:59.112871",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "wok hey chinese": {
+    "merchant_id": "merchant_wok_hey_chinese_067",
+    "canonical_name": "WOK HEY Chinese",
+    "category": "Uncategorized",
+    "aliases": [
+      "wok hey chinese"
+    ],
+    "created_at": "2025-12-30T01:02:59.112882",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "metro": {
+    "merchant_id": "merchant_metro_067",
+    "canonical_name": "Metro 245",
+    "category": "Groceries",
+    "aliases": [
+      "metro"
+    ],
+    "created_at": "2025-12-30T01:02:59.112888",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "amazon": {
+    "merchant_id": "merchant_amazon_067",
+    "canonical_name": "Amazon.ca",
+    "category": "Shopping",
+    "aliases": [
+      "amazon"
+    ],
+    "created_at": "2025-12-30T01:02:59.112924",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "maison simon": {
+    "merchant_id": "merchant_maison_simon_067",
+    "canonical_name": "La Maison Simon",
+    "category": "Uncategorized",
+    "aliases": [
+      "maison simon"
+    ],
+    "created_at": "2025-12-30T01:02:59.112935",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "presto mobl": {
+    "merchant_id": "merchant_presto_mobl_067",
+    "canonical_name": "Presto Mobl",
+    "category": "Transportation",
+    "aliases": [
+      "presto mobl"
+    ],
+    "created_at": "2025-12-30T01:02:58.741310",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "sunlife med aso": {
+    "merchant_id": "merchant_sunlife_med_aso_067",
+    "canonical_name": "Sunlife MED ASO",
+    "category": "Uncategorized",
+    "aliases": [
+      "sunlife med aso"
+    ],
+    "created_at": "2025-12-30T01:02:58.741322",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "gap com": {
+    "merchant_id": "merchant_gap_com_067",
+    "canonical_name": "Gap.com",
+    "category": "Shopping",
+    "aliases": [
+      "gap com"
+    ],
+    "created_at": "2025-12-30T01:02:58.741339",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "sunlife med ins": {
+    "merchant_id": "merchant_sunlife_med_ins_067",
+    "canonical_name": "Sunlife MED INS",
+    "category": "Uncategorized",
+    "aliases": [
+      "sunlife med ins"
+    ],
+    "created_at": "2025-12-30T01:02:58.741379",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "expedia": {
+    "merchant_id": "merchant_expedia_067",
+    "canonical_name": "Expedia 7326679",
+    "category": "Travel",
+    "aliases": [
+      "expedia"
+    ],
+    "created_at": "2025-12-30T01:02:58.741428",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "correction expedia": {
+    "merchant_id": "merchant_correction_expedia_067",
+    "canonical_name": "Correction Expedia 7326679",
+    "category": "Travel",
+    "aliases": [
+      "correction expedia"
+    ],
+    "created_at": "2025-12-30T01:02:58.741442",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "geeland interna": {
+    "merchant_id": "merchant_geeland_interna_067",
+    "canonical_name": "Geeland Interna",
+    "category": "Uncategorized",
+    "aliases": [
+      "geeland interna"
+    ],
+    "created_at": "2025-12-30T01:02:58.741480",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "dollarama": {
+    "merchant_id": "merchant_dollarama_067",
+    "canonical_name": "Dollarama #0979",
+    "category": "Shopping",
+    "aliases": [
+      "dollarama"
+    ],
+    "created_at": "2025-12-30T01:02:58.741489",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "google": {
+    "merchant_id": "merchant_google_067",
+    "canonical_name": "Google *service",
+    "category": "Uncategorized",
+    "aliases": [
+      "google"
+    ],
+    "created_at": "2025-12-30T01:02:58.741500",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "riley yig": {
+    "merchant_id": "merchant_riley_yig_067",
+    "canonical_name": "Riley's YIG #16",
+    "category": "Uncategorized",
+    "aliases": [
+      "riley yig"
+    ],
+    "created_at": "2025-12-30T01:02:58.741512",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "floss dental": {
+    "merchant_id": "merchant_floss_dental_067",
+    "canonical_name": "Floss Dental CO",
+    "category": "Health & Fitness",
+    "aliases": [
+      "floss dental"
+    ],
+    "created_at": "2025-12-30T01:02:58.741545",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "thai express": {
+    "merchant_id": "merchant_thai_express_067",
+    "canonical_name": "Thai Express -",
+    "category": "Dining",
+    "aliases": [
+      "thai express"
+    ],
+    "created_at": "2025-12-30T01:02:58.741551",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "gyubee japanese": {
+    "merchant_id": "merchant_gyubee_japanese_067",
+    "canonical_name": "Gyubee Japanese",
+    "category": "Uncategorized",
+    "aliases": [
+      "gyubee japanese"
+    ],
+    "created_at": "2025-12-30T01:02:58.741563",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "walmart": {
+    "merchant_id": "merchant_walmart_067",
+    "canonical_name": "Walmart.ca",
+    "category": "Shopping",
+    "aliases": [
+      "walmart"
+    ],
+    "created_at": "2025-12-30T01:02:58.741572",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "visa deb youversion bibl": {
+    "merchant_id": "merchant_visa_deb_youversion_bibl_067",
+    "canonical_name": "Intl Visa DEB Youversion Bibl",
+    "category": "Uncategorized",
+    "aliases": [
+      "visa deb youversion bibl"
+    ],
+    "created_at": "2025-12-30T01:02:58.741586",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  },
+  "pay": {
+    "merchant_id": "merchant_pay_067",
+    "canonical_name": "PAY",
+    "category": "Uncategorized",
+    "aliases": [
+      "pay"
+    ],
+    "created_at": "2025-12-30T01:02:58.741596",
+    "transaction_count": 0,
+    "total_spend": 0.0
+  }
+}

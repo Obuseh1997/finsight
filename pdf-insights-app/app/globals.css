@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+/* FinSight Design System - Modern Banking UI */
+:root {
+  /* Light Mode Colors */
+  --background: 210 20% 98%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --primary: 221 83% 53%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222 47% 11%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+  --accent: 210 40% 96%;
+  --accent-foreground: 222 47% 11%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --success: 173 58% 39%;
+  --warning: 43 74% 66%;
+}
+
+/* Dark mode - triggered by data-theme="dark" attribute */
+[data-theme="dark"] {
+  /* Background & Foreground */
+  --background: 222 47% 11%;      /* Deep navy #1a2847 */
+  --foreground: 210 40% 98%;      /* Off-white #fafbfc */
+
+  /* Card */
+  --card: 222 47% 13%;            /* Very dark blue #202e4a */
+  --card-foreground: 210 40% 98%;
+
+  /* Primary */
+  --primary: 217 91% 60%;         /* Bright blue #5eb3ff */
+  --primary-foreground: 222 47% 11%;
+
+  /* Secondary */
+  --secondary: 222 47% 18%;       /* Dark navy #2a3d5f */
+  --secondary-foreground: 210 40% 98%;
+
+  /* Muted - CRITICAL FIX for invisible text */
+  --muted: 222 47% 18%;           /* Lighter navy #2a3d5f - for input backgrounds */
+  --muted-foreground: 210 40% 75%; /* Light gray #b8c5d6 - READABLE on dark bg */
+
+  /* Accent */
+  --accent: 222 47% 20%;          /* Medium navy #2f4463 */
+  --accent-foreground: 210 40% 98%;
+
+  /* Border & Input - CRITICAL FIX for invisible borders */
+  --border: 222 47% 25%;          /* Medium navy border #3a5070 - VISIBLE */
+  --input: 222 47% 18%;           /* Same as muted */
+
+  /* Destructive */
+  --destructive: 0 84% 60%;       /* Red (same as light mode) */
+  --destructive-foreground: 210 40% 98%;
+
+  /* Success & Warning */
+  --success: 173 58% 45%;         /* Teal (lightened for dark mode) */
+  --warning: 43 74% 66%;          /* Amber (same as light mode) */
+
+  /* Focus ring */
+  --ring: 217 91% 60%;            /* Same as primary */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-body), system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: var(--font-display), system-ui, -apple-system, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display), system-ui, -apple-system, sans-serif;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+button, a, input, textarea, select {
+  transition: all 0.2s ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fade-in 0.5s ease-out;
+}
