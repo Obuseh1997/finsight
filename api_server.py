@@ -186,7 +186,7 @@ def merge_statements():
         try:
             # Run merge script
             merge_script = BASE_DIR / 'merge_statements.py'
-            cmd = ['python3', str(merge_script)] + temp_files + [output_path]
+            cmd = ['python3', str(merge_script)] + temp_files + ['--output', output_path]
 
             result = subprocess.run(
                 cmd,
