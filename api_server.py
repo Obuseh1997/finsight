@@ -262,7 +262,7 @@ def generate_insights():
             # Run insights script
             insights_script = BASE_DIR / 'generate_insights.py'
             result = subprocess.run(
-                ['python3', str(insights_script), input_path, output_path],
+                ['python3', str(insights_script), input_path, '--output', output_path],
                 capture_output=True,
                 text=True,
                 timeout=30
