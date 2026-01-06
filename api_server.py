@@ -340,6 +340,70 @@ def learn_merchant():
         print(f'Error in learn_merchant: {e}')
         return jsonify({'error': str(e)}), 500
 
+@app.route('/api/confidence', methods=['POST'])
+def calculate_confidence():
+    """
+    Calculate confidence scores for merchant normalization.
+
+    Request body:
+    {
+        "statement": {"transactions": [...], ...},
+        "threshold": 60
+    }
+
+    Returns:
+    {
+        "transactions": [...with confidence scores...],
+        "summary": {...}
+    }
+    """
+    try:
+        data = request.get_json()
+
+        if not data or 'statement' not in data:
+            return jsonify({'error': 'No statement provided'}), 400
+
+        statement = data['statement']
+        threshold = data.get('threshold', 60)
+
+        # Save to temp file
+        with tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False) as f:
+            json.dump(statement, f)
+            input_path = f.name
+
+        with tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False) as f:
+            output_path = f.name
+
+        try:
+            # Run confidence calculation script
+            confidence_script = BASE_DIR / 'calculate_confidence.py'
+            result = subprocess.run(
+                ['python3', str(confidence_script), input_path, '--output', output_path, '--threshold', str(threshold)],
+                capture_output=True,
+                text=True,
+                timeout=30
+            )
+
+            if result.returncode != 0:
+                raise Exception(f'Confidence calculation failed: {result.stderr}')
+
+            # Read scored data
+            with open(output_path, 'r') as f:
+                scored_data = json.load(f)
+
+            return jsonify(scored_data)
+
+        finally:
+            try:
+                os.unlink(input_path)
+                os.unlink(output_path)
+            except:
+                pass
+
+    except Exception as e:
+        print(f'Error in calculate_confidence: {e}')
+        return jsonify({'error': str(e)}), 500
+
 if __name__ == '__main__':
     # Railway sets PORT environment variable
     port = int(os.environ.get('PORT', 8000))
