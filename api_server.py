@@ -172,6 +172,10 @@ def merge_statements():
 
         statements = data['statements']
 
+        # If only one statement, just return it as-is (no merge needed)
+        if len(statements) == 1:
+            return jsonify({'merged': statements[0]})
+
         # Save statements to temp files
         temp_files = []
         for i, stmt in enumerate(statements):
