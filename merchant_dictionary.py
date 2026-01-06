@@ -127,8 +127,13 @@ class MerchantDictionary:
     def get_stats(self) -> Dict[str, Any]:
         """Get dictionary statistics."""
         unique_merchants = set()
-        for merchant_data in self.dictionary.values():
-            unique_merchants.add(merchant_data['merchant_id'])
+        for key, merchant_data in self.dictionary.items():
+            # Handle both old format (with merchant_id) and new format (without)
+            if isinstance(merchant_data, dict):
+                merchant_id = merchant_data.get('merchant_id') or merchant_data.get('canonical_name') or key
+            else:
+                merchant_id = key
+            unique_merchants.add(merchant_id)
 
         return {
             'unique_merchants': len(unique_merchants),
