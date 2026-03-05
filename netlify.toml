@@ -7,6 +7,10 @@
   NODE_VERSION = "20.9.0"
   PYTHON_VERSION = "3.9"
 
+# Keep Railway API alive by pinging /health every 5 minutes
+[functions."keep-alive"]
+  schedule = "*/5 * * * *"
+
 # Next.js specific settings - this plugin handles routing automatically
 [[plugins]]
   package = "@netlify/plugin-nextjs"
