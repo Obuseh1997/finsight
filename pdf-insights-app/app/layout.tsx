@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit, Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeToggle } from "@/components/ThemeToggle";
 
 const outfit = Outfit({
   variable: "--font-display",
@@ -37,7 +36,6 @@ export default function RootLayout({
       <body
         className={`${outfit.variable} ${inter.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeToggle />
         {children}
       </body>
     </html>

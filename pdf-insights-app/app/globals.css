@@ -19,8 +19,26 @@
   --destructive-foreground: 210 40% 98%;
   --border: 214 32% 91%;
   --input: 214 32% 91%;
-  --success: 173 58% 39%;
+  --success: 142 71% 45%;
   --warning: 43 74% 66%;
+
+  /* App header */
+  --nav: 0 0% 100%;
+  --nav-border: 214 32% 88%;
+
+  /* Chart colors — vibrant, accessible */
+  --chart-1: 221 83% 53%;
+  --chart-2: 142 71% 45%;
+  --chart-3: 32 95% 50%;
+  --chart-4: 262 83% 58%;
+  --chart-5: 330 81% 60%;
+  --chart-6: 186 90% 40%;
+  --chart-7: 25 95% 53%;
+  --chart-8: 199 89% 48%;
+  --chart-9: 158 64% 52%;
+  --chart-10: 291 64% 42%;
+  --chart-11: 349 89% 60%;
+  --chart-12: 45 93% 47%;
 }
 
 /* Dark mode - triggered by data-theme="dark" attribute */
@@ -58,11 +76,29 @@
   --destructive-foreground: 210 40% 98%;
 
   /* Success & Warning */
-  --success: 173 58% 45%;         /* Teal (lightened for dark mode) */
+  --success: 142 71% 48%;         /* Emerald (lightened for dark mode) */
   --warning: 43 74% 66%;          /* Amber (same as light mode) */
 
   /* Focus ring */
   --ring: 217 91% 60%;            /* Same as primary */
+
+  /* App header */
+  --nav: 222 47% 9%;
+  --nav-border: 222 47% 22%;
+
+  /* Chart colors — slightly lighter for dark backgrounds */
+  --chart-1: 217 91% 60%;
+  --chart-2: 142 71% 52%;
+  --chart-3: 38 92% 55%;
+  --chart-4: 262 83% 68%;
+  --chart-5: 330 81% 68%;
+  --chart-6: 186 85% 50%;
+  --chart-7: 28 92% 60%;
+  --chart-8: 199 85% 58%;
+  --chart-9: 158 64% 60%;
+  --chart-10: 291 64% 55%;
+  --chart-11: 349 85% 68%;
+  --chart-12: 45 90% 55%;
 }
 
 * {
@@ -107,6 +143,21 @@ button, a, input, textarea, select {
   }
 }
 
+@keyframes slide-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .animate-in {
-  animation: fade-in 0.5s ease-out;
+  animation: fade-in 0.4s ease-out;
+}
+
+.animate-slide-in {
+  animation: slide-in-down 0.25s ease-out;
 }
