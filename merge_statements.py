@@ -133,6 +133,9 @@ def parse_date(date_str: str) -> datetime:
     """
     import re
 
+    if not date_str:
+        return datetime.min
+
     # Current year as fallback
     current_year = datetime.now().year
 
@@ -232,7 +235,7 @@ def merge_statements(json_paths: List[str]) -> Dict[str, Any]:
 
     # Sort by date
     print("\n📅 Sorting transactions chronologically...")
-    unique_transactions.sort(key=lambda t: parse_date(t.get('date', '')))
+    unique_transactions.sort(key=lambda t: parse_date(t.get('date') or ''))
 
     # Determine date range
     if unique_transactions:
