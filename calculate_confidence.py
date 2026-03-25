@@ -267,7 +267,7 @@ def main():
         print("-" * 80)
 
         for txn in low_confidence[:10]:
-            date = txn.get('date', 'N/A')[:10].ljust(10)
+            date = (txn.get('date') or 'N/A')[:10].ljust(10)
             merchant = (txn.get('merchant_display') or txn.get('normalized_merchant', 'Unknown'))[:30].ljust(30)
             score = txn['confidence']['confidence_score']
             level = txn['confidence']['confidence_level']

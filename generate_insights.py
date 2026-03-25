@@ -24,6 +24,9 @@ def parse_date(date_str: str) -> datetime:
     Parse date from various formats (Nov 3, 27Oct, etc).
     Returns datetime for analysis. Uses current year as default.
     """
+    if not date_str:
+        return datetime.min
+
     current_year = datetime.now().year
 
     # Format: "Nov 3" or "Nov 15"
@@ -94,7 +97,7 @@ def analyze_top_merchants(transactions: List[Dict[str, Any]], top_n: int = 10) -
             'total_spend': round(data['total_spend'], 2),
             'transaction_count': data['transaction_count'],
             'average_transaction': round(data['total_spend'] / data['transaction_count'], 2),
-            'transactions': sorted(data['transactions'], key=lambda t: parse_date(t.get('date', '')))
+            'transactions': sorted(data['transactions'], key=lambda t: parse_date(t.get('date') or ''))
         })
 
     # Sort by total spend
@@ -126,7 +129,7 @@ def detect_recurring_charges(transactions: List[Dict[str, Any]]) -> List[Dict[st
         normalized = txn.get('normalized_merchant', 'unknown')
         merchant_groups[normalized].append({
             'date': txn.get('date'),
-            'date_obj': parse_date(txn.get('date', '')),
+            'date_obj': parse_date(txn.get('date') or ''),
             'amount': abs(amount),
             'description': txn.get('description', '')
         })
@@ -201,7 +204,7 @@ def calculate_spending_summary(transactions: List[Dict[str, Any]]) -> Dict[str, 
 
     for txn in transactions:
         amount = txn.get('amount', 0)
-        date_str = txn.get('date', '')
+        date_str = txn.get('date') or ''
 
         if date_str:
             dates.append(parse_date(date_str))
@@ -281,7 +284,7 @@ def analyze_spending_by_category(transactions: List[Dict[str, Any]]) -> List[Dic
             'total_spend': round(data['total_spend'], 2),
             'transaction_count': data['transaction_count'],
             'average_transaction': round(data['total_spend'] / data['transaction_count'], 2) if data['transaction_count'] > 0 else 0,
-            'transactions': sorted(data['transactions'], key=lambda t: parse_date(t.get('date', '')))
+            'transactions': sorted(data['transactions'], key=lambda t: parse_date(t.get('date') or ''))
         })
 
     # Sort by total spend
