@@ -15,10 +15,11 @@ function detectBank(text) {
         return 'rbc';
     }
 
-    // CIBC detection
-    if (header.includes('CIBC Account Statement') ||
-        header.includes('CIBC') && header.includes('Account Statement')) {
-        return 'cibc';
+    // CIBC detection — credit card vs chequing
+    if (header.includes('CIBC')) {
+        const isCreditCard = ['Visa', 'Mastercard', 'VisaTM', 'Aventura', 'CIBC Card']
+            .some(kw => header.includes(kw));
+        return isCreditCard ? 'cibc-credit' : 'cibc';
     }
 
     // TD detection (future)

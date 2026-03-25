@@ -28,16 +28,191 @@ except ImportError:
     NORMALIZE_AVAILABLE = False
 
 def detect_bank(pdf_path: str) -> str:
-    """Detect which bank the statement is from."""
+    """Detect which bank and statement type from the statement."""
     with pdfplumber.open(pdf_path) as pdf:
-        first_page_text = pdf.pages[0].extract_text()
+        first_page_text = pdf.pages[0].extract_text() or ''
 
         if 'CIBC' in first_page_text:
+            # Credit card indicators: Visa/Mastercard card statements
+            if any(kw in first_page_text for kw in ['Visa', 'Mastercard', 'VisaTM', 'Aventura', 'CIBC Card']):
+                return 'cibc-credit'
             return 'cibc'
         elif 'RBC' in first_page_text or 'Royal Bank' in first_page_text:
             return 'rbc'
         else:
             return 'unknown'
+
+
+# ---------------------------------------------------------------------------
+# CIBC Credit Card parser (text-line based, not coordinate based)
+# ---------------------------------------------------------------------------
+
+# All CIBC Spend Categories as they appear verbatim in statements
+CIBC_CREDIT_CATEGORIES = [
+    'Personal and Household Expenses',
+    'Professional and Financial Services',
+    'Retail and Grocery',
+    'Transportation',
+    'Hotel, Entertainment and Recreation',
+    'Restaurants',
+    'Home and Office Improvement',
+    'Health and Education',
+]
+
+MONTH_MAP = {
+    'January': '01', 'February': '02', 'March': '03', 'April': '04',
+    'May': '05', 'June': '06', 'July': '07', 'August': '08',
+    'September': '09', 'October': '10', 'November': '11', 'December': '12',
+    'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04',
+    'Jun': '06', 'Jul': '07', 'Aug': '08',
+    'Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12',
+}
+
+
+def _credit_statement_meta(first_page_text: str) -> dict:
+    """Extract statement date and period from first page."""
+    meta = {'year': str(datetime.now().year), 'end_month': datetime.now().month, 'period': None}
+
+    # Statement Date: "Statement Date\nFebruary 22, 2026" or inline
+    date_match = re.search(
+        r'Statement Date\s+(\w+)\s+(\d{1,2}),\s+(\d{4})', first_page_text
+    )
+    if date_match:
+        meta['year'] = date_match.group(3)
+        meta['end_month'] = int(MONTH_MAP.get(date_match.group(1), '01'))
+
+    # Period: "January 23to February 22, 2026" (no space before 'to' is common)
+    period_match = re.search(
+        r'(\w+)\s+(\d{1,2})\s*to\s+(\w+)\s+(\d{1,2}),\s+(\d{4})', first_page_text
+    )
+    if period_match:
+        year = period_match.group(5)
+        start_month = MONTH_MAP.get(period_match.group(1), '01')
+        start_day = period_match.group(2).zfill(2)
+        end_month_str = MONTH_MAP.get(period_match.group(3), '01')
+        end_day = period_match.group(4).zfill(2)
+        meta['period'] = {
+            'start_date': f"{year}-{start_month}-{start_day}",
+            'end_date': f"{year}-{end_month_str}-{end_day}",
+        }
+
+    return meta
+
+
+def _infer_year(trans_month: int, end_month: int, end_year: int) -> int:
+    """Handle cross-year statements (e.g., Dec-Jan)."""
+    return end_year - 1 if trans_month > end_month else end_year
+
+
+def _parse_credit_line(line: str, end_month: int, end_year: int) -> dict | None:
+    """
+    Parse one transaction line from a CIBC credit card statement.
+
+    Expected format:
+      Mon DD  Mon DD  MERCHANT NAME CITY PROV  [Category]  Amount
+    e.g.:
+      Jan 22 Jan 23 LINKEDIN P767950886 Mountain ViewCA Professional and Financial Services 322.73
+    """
+    line = line.strip()
+
+    # Must start with two short-month abbreviations and days
+    date_re = r'^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{1,2})\s+' \
+              r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{1,2})\s+'
+    date_match = re.match(date_re, line)
+    if not date_match:
+        return None
+
+    trans_month_str, trans_day, post_month_str, post_day = date_match.groups()
+    remainder = line[date_match.end():]
+
+    # Amount is always the last token
+    amount_match = re.search(r'([\d,]+\.\d{2})$', remainder)
+    if not amount_match:
+        return None
+    amount = float(amount_match.group(1).replace(',', ''))
+    remainder = remainder[:amount_match.start()].strip()
+
+    # Check if a known category is present at the end of remainder
+    category = 'Uncategorized'
+    for cat in CIBC_CREDIT_CATEGORIES:
+        if remainder.endswith(cat):
+            category = cat
+            remainder = remainder[: -len(cat)].strip()
+            break
+
+    merchant = remainder.strip()
+    if not merchant:
+        return None
+
+    # Infer correct year for post date
+    post_month_num = int(MONTH_MAP.get(post_month_str, '01'))
+    year = _infer_year(post_month_num, end_month, end_year)
+    post_date = f"{year}-{MONTH_MAP[post_month_str]}-{post_day.zfill(2)}"
+
+    return {
+        'date': post_date,
+        'description': merchant,
+        'merchant': merchant,
+        'amount': -amount,   # charges are negative (debit)
+        'type': 'debit',
+        'category': category,
+        'withdrawal': amount,
+        'deposit': None,
+        'balance': None,
+    }
+
+
+def parse_credit_card_statement(pdf_path: str) -> tuple[List[Dict[str, Any]], str, dict]:
+    """
+    Parse a CIBC credit card PDF statement using text-line parsing.
+    Returns (transactions, bank_type, meta).
+    """
+    transactions = []
+
+    with pdfplumber.open(pdf_path) as pdf:
+        first_page_text = pdf.pages[0].extract_text() or ''
+        meta = _credit_statement_meta(first_page_text)
+        end_month = meta['end_month']
+        end_year = int(meta['year'])
+
+        for page in pdf.pages:
+            text = page.extract_text()
+            if not text:
+                continue
+
+            in_charges = False
+
+            for line in text.split('\n'):
+                stripped = line.strip()
+
+                # Detect entry into charges section
+                if 'Your new charges and credits' in stripped:
+                    in_charges = True
+                    continue
+
+                # Stop at summary/total lines
+                if in_charges and re.match(r'^Total\s+(for|payments)', stripped, re.IGNORECASE):
+                    in_charges = False
+                    continue
+
+                # Skip non-charge sections and junk lines
+                if not in_charges:
+                    continue
+                if not stripped or stripped == 'Q':
+                    continue
+                # Q marker can prefix the transaction line itself — strip and keep
+                if stripped.startswith('Q '):
+                    stripped = stripped[2:].strip()
+                if re.match(r'^Card number', stripped):
+                    continue
+                if 'Points Multiplier' in stripped or 'earn rate' in stripped:
+                    continue
+
+                txn = _parse_credit_line(stripped, end_month, end_year)
+                if txn:
+                    transactions.append(txn)
+
+    return transactions, 'cibc-credit', meta
 
 def extract_text_with_coordinates(pdf_path: str) -> tuple[List[Dict[str, Any]], str]:
     """
@@ -404,18 +579,28 @@ def main():
             scrub_pii = False
 
     try:
-        # Extract all text items with coordinates
-        items, bank = extract_text_with_coordinates(pdf_path)
-        print(f'\n✓ Extracted {len(items)} text items from PDF')
+        # Detect bank/statement type first
+        bank = detect_bank(pdf_path)
+        print(f'📍 Detected bank: {bank.upper()}')
 
-        if not items:
-            print('✗ No text found in PDF')
-            sys.exit(1)
+        if bank == 'cibc-credit':
+            # Credit card: use text-line parser (coordinate parser is for chequing layouts)
+            print('\n💳 Credit card statement detected — using text-line parser...')
+            transactions, bank, meta = parse_credit_card_statement(pdf_path)
+            print(f'✓ Extracted {len(transactions)} transactions')
+        else:
+            # Chequing/savings: use coordinate-based parser
+            items, bank = extract_text_with_coordinates(pdf_path)
+            print(f'\n✓ Extracted {len(items)} text items from PDF')
 
-        # Parse transactions from coordinate data
-        print('\n💰 Parsing transactions...')
-        transactions = parse_transactions(items, bank)
-        print(f'✓ Extracted {len(transactions)} transactions')
+            if not items:
+                print('✗ No text found in PDF')
+                sys.exit(1)
+
+            # Parse transactions from coordinate data
+            print('\n💰 Parsing transactions...')
+            transactions = parse_transactions(items, bank)
+            print(f'✓ Extracted {len(transactions)} transactions')
 
         # Scrub PII if requested
         if scrub_pii and SCRUB_AVAILABLE:
