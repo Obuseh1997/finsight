@@ -15,7 +15,7 @@ export class SessionStorage {
    */
   static createSession(): string {
     const sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    localStorage.setItem(STORAGE_KEYS.SESSION_ID, sessionId);
+    sessionStorage.setItem(STORAGE_KEYS.SESSION_ID, sessionId);
     return sessionId;
   }
 
@@ -23,21 +23,21 @@ export class SessionStorage {
    * Get current session ID
    */
   static getSessionId(): string | null {
-    return localStorage.getItem(STORAGE_KEYS.SESSION_ID);
+    return sessionStorage.getItem(STORAGE_KEYS.SESSION_ID);
   }
 
   /**
    * Save merged statement data
    */
   static saveStatements(data: StatementData): void {
-    localStorage.setItem(STORAGE_KEYS.STATEMENTS, JSON.stringify(data));
+    sessionStorage.setItem(STORAGE_KEYS.STATEMENTS, JSON.stringify(data));
   }
 
   /**
    * Get merged statement data
    */
   static getStatements(): StatementData | null {
-    const data = localStorage.getItem(STORAGE_KEYS.STATEMENTS);
+    const data = sessionStorage.getItem(STORAGE_KEYS.STATEMENTS);
     return data ? JSON.parse(data) : null;
   }
 
@@ -45,14 +45,14 @@ export class SessionStorage {
    * Save scored transaction data
    */
   static saveScoredData(data: StatementData): void {
-    localStorage.setItem(STORAGE_KEYS.SCORED_DATA, JSON.stringify(data));
+    sessionStorage.setItem(STORAGE_KEYS.SCORED_DATA, JSON.stringify(data));
   }
 
   /**
    * Get scored transaction data
    */
   static getScoredData(): StatementData | null {
-    const data = localStorage.getItem(STORAGE_KEYS.SCORED_DATA);
+    const data = sessionStorage.getItem(STORAGE_KEYS.SCORED_DATA);
     return data ? JSON.parse(data) : null;
   }
 
@@ -60,14 +60,14 @@ export class SessionStorage {
    * Save insights data
    */
   static saveInsights(data: InsightsData): void {
-    localStorage.setItem(STORAGE_KEYS.INSIGHTS, JSON.stringify(data));
+    sessionStorage.setItem(STORAGE_KEYS.INSIGHTS, JSON.stringify(data));
   }
 
   /**
    * Get insights data
    */
   static getInsights(): InsightsData | null {
-    const data = localStorage.getItem(STORAGE_KEYS.INSIGHTS);
+    const data = sessionStorage.getItem(STORAGE_KEYS.INSIGHTS);
     return data ? JSON.parse(data) : null;
   }
 
@@ -76,7 +76,7 @@ export class SessionStorage {
    */
   static clearSession(): void {
     Object.values(STORAGE_KEYS).forEach(key => {
-      localStorage.removeItem(key);
+      sessionStorage.removeItem(key);
     });
   }
 
