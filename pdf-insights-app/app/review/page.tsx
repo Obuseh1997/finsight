@@ -60,7 +60,7 @@ function TransactionGroupCard({
           ? 'border-[hsl(0,84%,60%)]/40 bg-[hsl(0,84%,60%)]/5'
           : isCorrected
           ? 'border-[hsl(142,71%,45%)]/30 bg-[hsl(142,71%,45%)]/5'
-          : 'border-[hsl(var(--border))] bg-[hsl(var(--card))]'
+          : 'border-transparent bg-[hsl(var(--surface-card))] shadow-ambient'
       }`}
     >
       {/* Header row */}
@@ -79,7 +79,7 @@ function TransactionGroupCard({
                   type="text"
                   value={editedMerchant}
                   onChange={(e) => onMerchantChange(e.target.value)}
-                  className="w-full px-3 py-2 text-sm border-2 border-[hsl(var(--primary))] rounded-lg bg-[hsl(var(--card))] text-[hsl(var(--foreground))] focus:outline-none"
+                  className="w-full px-3 py-2 text-sm border-2 border-[hsl(var(--primary))] rounded-lg bg-[hsl(var(--surface-card))] text-[hsl(var(--foreground))] focus:outline-none"
                   placeholder="Enter merchant name"
                   autoFocus
                 />
@@ -91,7 +91,7 @@ function TransactionGroupCard({
                 <select
                   value={editedCategory}
                   onChange={(e) => onCategoryChange(e.target.value)}
-                  className="w-full px-3 py-2 text-sm border-2 border-[hsl(var(--border))] rounded-lg bg-[hsl(var(--card))] text-[hsl(var(--foreground))] focus:outline-none focus:border-[hsl(var(--primary))]"
+                  className="w-full px-3 py-2 text-sm border-2 border-[hsl(var(--border))]/40 rounded-lg bg-[hsl(var(--surface-card))] text-[hsl(var(--foreground))] focus:outline-none focus:border-[hsl(var(--primary))]"
                 >
                   <option value="">— Select category —</option>
                   {categories.map((c) => (
@@ -215,7 +215,7 @@ function TransactionGroupCard({
 // ── Section wrapper ────────────────────────────────────────────────
 function Section({ title, count, children }: { title: string; count: number; children: React.ReactNode }) {
   return (
-    <div className="bg-[hsl(var(--card))] rounded-2xl border border-[hsl(var(--border))]/60 shadow-sm p-6">
+    <div className="bg-[hsl(var(--surface-card))] rounded-2xl shadow-ambient p-6">
       <h2 className="font-display text-lg font-bold text-[hsl(var(--foreground))] mb-1">{title}</h2>
       <p className="text-sm text-[hsl(var(--muted-foreground))] mb-4">
         {count} item{count !== 1 ? 's' : ''}
@@ -427,7 +427,7 @@ export default function ReviewPage() {
             { label: 'Subscriptions', value: categorizedGroups.subscriptions.length, color: 'hsl(43,74%,55%)', sub: 'Recurring' },
             { label: 'Merchants', value: categorizedGroups.merchants.length, color: 'hsl(262,83%,58%)', sub: 'Store purchases' },
           ].map(({ label, value, color, sub }) => (
-            <div key={label} className="bg-[hsl(var(--card))] rounded-xl border border-[hsl(var(--border))]/60 p-4 shadow-sm">
+            <div key={label} className="bg-[hsl(var(--surface-card))] rounded-xl shadow-ambient p-4">
               <p className="font-display text-2xl font-bold" style={{ color }}>{value}</p>
               <p className="text-sm font-medium text-[hsl(var(--foreground))]">{label}</p>
               <p className="text-xs text-[hsl(var(--muted-foreground))]">{sub}</p>
@@ -437,14 +437,14 @@ export default function ReviewPage() {
 
         {/* Progress bar */}
         {initialTotal > 0 && (
-          <div className="bg-[hsl(var(--card))] rounded-xl border border-[hsl(var(--border))]/60 p-4 mb-6 shadow-sm">
+          <div className="bg-[hsl(var(--surface-card))] rounded-xl shadow-ambient p-4 mb-6">
             <div className="flex items-center justify-between mb-2">
               <p className="text-sm font-semibold text-[hsl(var(--foreground))]">Review Progress</p>
               <p className="text-sm font-bold text-[hsl(var(--primary))]">{progressPct}%</p>
             </div>
-            <div className="w-full bg-[hsl(var(--border))] rounded-full h-2 overflow-hidden">
+            <div className="w-full bg-[hsl(var(--surface-low))] rounded-full h-2 overflow-hidden">
               <div
-                className="bg-[hsl(var(--primary))] h-2 rounded-full transition-all duration-500"
+                className="btn-primary-gradient h-2 rounded-full transition-all duration-500"
                 style={{ width: `${progressPct}%` }}
               />
             </div>
@@ -501,7 +501,7 @@ export default function ReviewPage() {
             )}
 
             {/* Actions footer */}
-            <div className="bg-[hsl(var(--card))] rounded-2xl border border-[hsl(var(--border))]/60 shadow-sm px-6 py-4 flex items-center justify-between">
+            <div className="bg-[hsl(var(--surface-card))] rounded-2xl shadow-ambient px-6 py-4 flex items-center justify-between">
               <button
                 onClick={() => router.push('/insights')}
                 className="text-sm font-semibold text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--foreground))] transition-colors"
@@ -510,7 +510,7 @@ export default function ReviewPage() {
               </button>
               <button
                 onClick={handleContinue}
-                className="inline-flex items-center gap-2 px-6 py-2.5 bg-[hsl(142,71%,45%)] text-white font-bold rounded-lg hover:opacity-90 transition-opacity shadow-sm"
+                className="inline-flex items-center gap-2 px-6 py-2.5 btn-primary-gradient font-bold rounded-xl hover:opacity-90 transition-opacity shadow-ambient"
               >
                 View Insights
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -520,7 +520,7 @@ export default function ReviewPage() {
             </div>
           </div>
         ) : (
-          <div className="bg-[hsl(var(--card))] rounded-2xl border border-[hsl(var(--border))]/60 shadow-sm p-12 text-center">
+          <div className="bg-[hsl(var(--surface-card))] rounded-2xl shadow-ambient p-12 text-center">
             <div className="w-16 h-16 bg-[hsl(142,71%,45%)]/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8 text-[hsl(142,71%,45%)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -534,7 +534,7 @@ export default function ReviewPage() {
             </p>
             <button
               onClick={handleContinue}
-              className="inline-flex items-center gap-2 px-6 py-2.5 bg-[hsl(142,71%,45%)] text-white font-bold rounded-lg hover:opacity-90 transition-opacity shadow-sm"
+              className="inline-flex items-center gap-2 px-6 py-2.5 btn-primary-gradient font-bold rounded-xl hover:opacity-90 transition-opacity shadow-ambient"
             >
               View Insights
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>

@@ -1,109 +1,113 @@
 @import "tailwindcss";
 
-/* FinSight Design System - Modern Banking UI */
+/* FinSight — "The Architectural Ledger" Design System (Stitch) */
 :root {
-  /* Light Mode Colors */
-  --background: 210 20% 98%;
-  --foreground: 222 47% 11%;
-  --card: 0 0% 100%;
-  --card-foreground: 222 47% 11%;
-  --primary: 221 83% 53%;
-  --primary-foreground: 210 40% 98%;
-  --secondary: 210 40% 96%;
-  --secondary-foreground: 222 47% 11%;
-  --muted: 210 40% 96%;
-  --muted-foreground: 215 16% 47%;
-  --accent: 210 40% 96%;
-  --accent-foreground: 222 47% 11%;
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 214 32% 91%;
-  --input: 214 32% 91%;
-  --success: 142 71% 45%;
-  --warning: 43 74% 66%;
+  /* Surface hierarchy — no divider lines, tonal layering only */
+  --background:        210 17% 98%;    /* #f7f9fb — base floor */
+  --surface-low:       210 17% 95%;    /* #f0f4f7 — section backgrounds */
+  --surface-card:      0   0%  100%;   /* #ffffff — actionable cards */
 
-  /* App header */
-  --nav: 0 0% 100%;
-  --nav-border: 214 32% 88%;
+  --foreground:        199 35% 17%;    /* #2a3439 — on_surface */
+  --card:              0   0%  100%;
+  --card-foreground:   199 35% 17%;
 
-  /* Chart colors — vibrant, accessible */
-  --chart-1: 221 83% 53%;
-  --chart-2: 142 71% 45%;
-  --chart-3: 32 95% 50%;
-  --chart-4: 262 83% 58%;
-  --chart-5: 330 81% 60%;
-  --chart-6: 186 90% 40%;
-  --chart-7: 25 95% 53%;
-  --chart-8: 199 89% 48%;
-  --chart-9: 158 64% 52%;
-  --chart-10: 291 64% 42%;
-  --chart-11: 349 89% 60%;
-  --chart-12: 45 93% 47%;
-}
+  /* Primary — Indigo #544FC0 */
+  --primary:           243 47% 53%;
+  --primary-dim:       243 47% 48%;    /* #4742B3 — gradient end */
+  --primary-foreground: 270 100% 99%; /* #faf6ff */
 
-/* Dark mode - triggered by data-theme="dark" attribute */
-[data-theme="dark"] {
-  /* Background & Foreground */
-  --background: 222 47% 11%;      /* Deep navy #1a2847 */
-  --foreground: 210 40% 98%;      /* Off-white #fafbfc */
+  /* Secondary — kept for UI component compatibility */
+  --secondary:         210 17% 95%;
+  --secondary-foreground: 199 35% 17%;
 
-  /* Card */
-  --card: 222 47% 13%;            /* Very dark blue #202e4a */
-  --card-foreground: 210 40% 98%;
-
-  /* Primary */
-  --primary: 217 91% 60%;         /* Bright blue #5eb3ff */
-  --primary-foreground: 222 47% 11%;
-
-  /* Secondary */
-  --secondary: 222 47% 18%;       /* Dark navy #2a3d5f */
-  --secondary-foreground: 210 40% 98%;
-
-  /* Muted - CRITICAL FIX for invisible text */
-  --muted: 222 47% 18%;           /* Lighter navy #2a3d5f - for input backgrounds */
-  --muted-foreground: 210 40% 75%; /* Light gray #b8c5d6 - READABLE on dark bg */
+  /* Muted */
+  --muted:             210 17% 95%;    /* surface-low */
+  --muted-foreground:  200 10% 40%;    /* #566166 */
 
   /* Accent */
-  --accent: 222 47% 20%;          /* Medium navy #2f4463 */
+  --accent:            210 17% 93%;
+  --accent-foreground: 199 35% 17%;
+
+  /* Semantic */
+  --destructive:       2   44% 43%;   /* #9f403d */
+  --destructive-foreground: 5 100% 98%;
+  --success:           160 59% 26%;   /* #1C6B51 — emerald */
+  --success-bright:    158 84% 39%;   /* brighter variant for badges/icons */
+  --warning:           43  74% 66%;
+
+  /* Borders — "Ghost Border" fallback only */
+  --border:            200 9%  70%;   /* #a9b4b9 — outline_variant at low opacity */
+  --input:             210 17% 95%;
+
+  /* Nav — glassmorphism base */
+  --nav:               0   0%  100%;
+  --nav-border:        200 9%  85%;
+
+  /* Chart — vibrant, accessible */
+  --chart-1:  243 47% 53%;
+  --chart-2:  160 59% 40%;
+  --chart-3:   32 95% 50%;
+  --chart-4:  262 83% 58%;
+  --chart-5:  330 81% 60%;
+  --chart-6:  186 90% 40%;
+  --chart-7:   25 95% 53%;
+  --chart-8:  199 89% 48%;
+  --chart-9:  158 64% 52%;
+  --chart-10: 291 64% 42%;
+  --chart-11: 349 89% 60%;
+  --chart-12:  45 93% 47%;
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+  --background:        222 47% 11%;    /* #1a2847 */
+  --surface-low:       222 47% 13%;
+  --surface-card:      222 47% 15%;
+
+  --foreground:        210 40% 98%;
+  --card:              222 47% 13%;
+  --card-foreground:   210 40% 98%;
+
+  --primary:           243 80% 70%;    /* brightened indigo for dark */
+  --primary-dim:       243 80% 63%;
+  --primary-foreground: 222 47% 11%;
+
+  --secondary:         222 47% 18%;
+  --secondary-foreground: 210 40% 98%;
+
+  --muted:             222 47% 18%;
+  --muted-foreground:  210 40% 75%;
+
+  --accent:            222 47% 20%;
   --accent-foreground: 210 40% 98%;
 
-  /* Border & Input - CRITICAL FIX for invisible borders */
-  --border: 222 47% 25%;          /* Medium navy border #3a5070 - VISIBLE */
-  --input: 222 47% 18%;           /* Same as muted */
-
-  /* Destructive */
-  --destructive: 0 84% 60%;       /* Red (same as light mode) */
+  --destructive:       0   84% 60%;
   --destructive-foreground: 210 40% 98%;
+  --success:           142 71% 48%;
+  --success-bright:    142 71% 55%;
+  --warning:           43  74% 66%;
 
-  /* Success & Warning */
-  --success: 142 71% 48%;         /* Emerald (lightened for dark mode) */
-  --warning: 43 74% 66%;          /* Amber (same as light mode) */
+  --border:            222 47% 25%;
+  --input:             222 47% 18%;
 
-  /* Focus ring */
-  --ring: 217 91% 60%;            /* Same as primary */
+  --nav:               222 47%  9%;
+  --nav-border:        222 47% 22%;
 
-  /* App header */
-  --nav: 222 47% 9%;
-  --nav-border: 222 47% 22%;
-
-  /* Chart colors — slightly lighter for dark backgrounds */
-  --chart-1: 217 91% 60%;
-  --chart-2: 142 71% 52%;
-  --chart-3: 38 92% 55%;
-  --chart-4: 262 83% 68%;
-  --chart-5: 330 81% 68%;
-  --chart-6: 186 85% 50%;
-  --chart-7: 28 92% 60%;
-  --chart-8: 199 85% 58%;
-  --chart-9: 158 64% 60%;
+  --chart-1:  243 80% 70%;
+  --chart-2:  142 71% 52%;
+  --chart-3:   38 92% 55%;
+  --chart-4:  262 83% 68%;
+  --chart-5:  330 81% 68%;
+  --chart-6:  186 85% 50%;
+  --chart-7:   28 92% 60%;
+  --chart-8:  199 85% 58%;
+  --chart-9:  158 64% 60%;
   --chart-10: 291 64% 55%;
   --chart-11: 349 85% 68%;
-  --chart-12: 45 90% 55%;
+  --chart-12:  45 90% 55%;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -132,32 +136,48 @@ button, a, input, textarea, select {
   transition: all 0.2s ease-in-out;
 }
 
+/* Gradient CTA — Stitch spec: primary → primary_dim at 135° */
+.btn-primary-gradient {
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dim)));
+  color: hsl(var(--primary-foreground));
+}
+.btn-primary-gradient:hover {
+  background: linear-gradient(135deg, hsl(var(--primary-dim)), hsl(243 47% 43%));
+}
+
+/* Glassmorphism — Stitch spec: surface-card 80% + blur 12px */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+[data-theme="dark"] .glass {
+  background: rgba(26, 40, 71, 0.8);
+}
+
+/* Ambient shadow — Stitch spec: y8 blur24 on_surface 4% */
+.shadow-ambient {
+  box-shadow: 0 8px 24px rgba(42, 52, 57, 0.04);
+}
+[data-theme="dark"] .shadow-ambient {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
 @keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slide-in-down {
-  from {
-    opacity: 0;
-    transform: translateY(-6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.animate-in {
-  animation: fade-in 0.4s ease-out;
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
 }
 
-.animate-slide-in {
-  animation: slide-in-down 0.25s ease-out;
-}
+.animate-in        { animation: fade-in 0.4s ease-out; }
+.animate-slide-in  { animation: slide-in-down 0.25s ease-out; }
+.animate-pulse-dot { animation: pulse-dot 1.5s ease-in-out infinite; }
