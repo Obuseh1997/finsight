@@ -27,6 +27,12 @@ def parse_date(date_str: str) -> datetime:
     if not date_str:
         return datetime.min
 
+    # ISO format: 2026-01-22 (credit card parser output)
+    try:
+        return datetime.strptime(date_str[:10], '%Y-%m-%d')
+    except ValueError:
+        pass
+
     current_year = datetime.now().year
 
     # Format: "Nov 3" or "Nov 15"

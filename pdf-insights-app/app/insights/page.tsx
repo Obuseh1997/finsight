@@ -274,11 +274,17 @@ function SpendingInsightsPanel({ insights }: { insights: InsightsData }) {
     }
   }
 
-  if (summary.net_change < 0) {
+  if (summary.net_change > 0) {
     items.push({
       type: 'success',
       icon: <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>,
-      text: `You received $${Math.abs(summary.net_change).toLocaleString()} more than you spent this period.`,
+      text: `You received $${summary.net_change.toLocaleString()} more than you spent this period.`,
+    });
+  } else if (summary.net_change < 0) {
+    items.push({
+      type: 'warning',
+      icon: <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" /></svg>,
+      text: `You spent $${Math.abs(summary.net_change).toLocaleString()} more than you received this period.`,
     });
   }
 
